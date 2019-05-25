@@ -11,6 +11,9 @@ public class Player_Input : MonoBehaviour
     public KeyCode left2 = KeyCode.LeftArrow;
     public KeyCode jumpUp1 = KeyCode.W;
     public KeyCode jumpUp2 = KeyCode.UpArrow;
+    public KeyCode duck1 = KeyCode.S;
+    public KeyCode duck2 = KeyCode.DownArrow;
+    public bool noLadder = true;
 
 
 
@@ -19,7 +22,7 @@ public class Player_Input : MonoBehaviour
         bool right3 = Input.GetKey(right1);
         bool right4 = Input.GetKey(right2);
 
-        if(right3 == true || right4 == true)
+        if (right3 == true || right4 == true)
         {
             SendMessage("MoveRight", SendMessageOptions.DontRequireReceiver);
         }
@@ -32,13 +35,52 @@ public class Player_Input : MonoBehaviour
             SendMessage("MoveLeft", SendMessageOptions.DontRequireReceiver);
         }
 
-        bool jumpUp3 = Input.GetKeyDown(jumpUp1);
-        bool jumpUp4 = Input.GetKeyDown(jumpUp2);
+        bool jumpUp3 = Input.GetKey(jumpUp1);
+        bool jumpUp4 = Input.GetKey(jumpUp2);
 
-        if (jumpUp3 == true ||  jumpUp4 == true)
+        if (jumpUp3 == true || jumpUp4 == true)
         {
-            SendMessage("Jump", SendMessageOptions.DontRequireReceiver);
+            if (noLadder == true)
+            {
+                SendMessage("Jump", SendMessageOptions.DontRequireReceiver);
+            }
+            if (noLadder == false)
+            {
+                SendMessage("Climb", SendMessageOptions.DontRequireReceiver);
+            }
+        }
+
+        bool duck3 = Input.GetKey(duck1);
+        bool duck4 = Input.GetKey(duck2);
+
+
+        if (duck3 == true || duck4 == true)
+        {
+            SendMessage("Duck", SendMessageOptions.DontRequireReceiver);
         }
     }
-    
+
+    public void OnTriggerEnter(Collider trigger)
+    {
+
+        if (trigger.gameObject.tag == "Ladder")
+        {
+            noLadder = false;
+        }
+        if (trigger.gameObject.tag != "Ladder")
+        {
+            noLadder = true;
+        }
+    }
+
+   
+
+    public void OnTriggerExit(Collider trigger)
+    {
+        if (trigger.gameObject.tag == "Ladder")
+        {
+           noLadder = true;
+        }
+
+    }
 }

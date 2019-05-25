@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class Player_Stable : MonoBehaviour
 {
-
     void Update()
     {
         transform.position = new Vector3(transform.position.x, transform.position.y, 0);
