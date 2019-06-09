@@ -14,12 +14,14 @@ public class Player_Movement : MonoBehaviour
     Vector3 climbing;
     public bool grounded;
     public bool noLadder;
+    public SpriteRenderer spriteRenderer;
+    public bool flipX = false;
 
 
     public void Start()
     {
         rigidbody = GetComponent<Rigidbody>();
-
+        spriteRenderer = GetComponent<SpriteRenderer>();
     }
 
     public void FixedUpdate()
@@ -28,13 +30,14 @@ public class Player_Movement : MonoBehaviour
 
     public void MoveLeft()
     {
-
+        spriteRenderer.flipX = true;
         movingLeft = new Vector3(-runSpeed * Time.deltaTime, 0, 0);
         transform.position = transform.position + movingLeft;
     }
 
     public void MoveRight()
     {
+        spriteRenderer.flipX = false;
         movingRight = new Vector3(runSpeed * Time.deltaTime, 0, 0);
         transform.position = transform.position + movingRight;
     }
@@ -50,15 +53,17 @@ public class Player_Movement : MonoBehaviour
     public void Climb()
     {
         rigidbody.isKinematic = true;
-            
+
         climbing = new Vector3(0, climbSpeed * Time.deltaTime, 0);
         transform.position = transform.position + climbing;
-        
+
     }
     public void Duck()
     {
-        scale = gameObject.GetComponent<Collider>().transform.localScale;
-        scale.y *= .5f;
+        rigidbody.isKinematic = true;
+
+        climbing = new Vector3(0, -climbSpeed * Time.deltaTime, 0);
+        transform.position = transform.position + climbing;
     }
 
     public void OnTriggerEnter(Collider trigger)
