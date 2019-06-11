@@ -42,6 +42,8 @@ public class Player_Input : MonoBehaviour
         {
             if (noLadder == true)
             {
+                jumpUp3 = Input.GetKeyDown(jumpUp1);
+                jumpUp4 = Input.GetKeyDown(jumpUp2);
                 SendMessage("Jump", SendMessageOptions.DontRequireReceiver);
             }
             if (noLadder == false)
@@ -56,7 +58,10 @@ public class Player_Input : MonoBehaviour
 
         if (duck3 == true || duck4 == true)
         {
-            SendMessage("Duck", SendMessageOptions.DontRequireReceiver);
+            if (noLadder == false)
+            {
+                SendMessage("Duck", SendMessageOptions.DontRequireReceiver);
+            }
         }
     }
 
@@ -73,13 +78,23 @@ public class Player_Input : MonoBehaviour
         }
     }
 
-   
+    public void OnTriggerStay(Collider trigger)
+    {
+        if (trigger.gameObject.tag == "Ladder")
+        {
+            noLadder = false;
+        }
+        if (trigger.gameObject.tag != "Ladder")
+        {
+            noLadder = true;
+        }
+    }
 
     public void OnTriggerExit(Collider trigger)
     {
         if (trigger.gameObject.tag == "Ladder")
         {
-           noLadder = true;
+            noLadder = true;
         }
 
     }
