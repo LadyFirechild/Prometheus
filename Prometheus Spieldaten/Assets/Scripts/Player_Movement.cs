@@ -68,7 +68,20 @@ public class Player_Movement : MonoBehaviour
 
     public void OnTriggerEnter(Collider trigger)
     {
-        if (trigger.gameObject.tag != "Ladder")
+        if (trigger.gameObject.tag != "Ladder" && trigger.gameObject.tag != "AI" && trigger.gameObject.tag != "AI_SightRange")
+        {
+            grounded = true;
+            noLadder = true;
+        }
+        if (trigger.gameObject.tag == "Ladder")
+        {
+            noLadder = false;
+        }
+    }
+
+    public void OnTriggerStay(Collider trigger)
+    {
+        if (trigger.gameObject.tag != "Ladder" && trigger.gameObject.tag != "AI" && trigger.gameObject.tag != "AI_SightRange")
         {
             grounded = true;
             noLadder = true;
@@ -81,7 +94,7 @@ public class Player_Movement : MonoBehaviour
 
     public void OnTriggerExit(Collider trigger)
     {
-        if (trigger.gameObject.tag != "Ladder")
+        if (trigger.gameObject.tag != "Ladder" && trigger.gameObject.tag != "AI" && trigger.gameObject.tag != "AI_SightRange")
         {
             grounded = false;
         }

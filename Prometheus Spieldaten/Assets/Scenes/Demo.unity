@@ -930,30 +930,17 @@ GameObject:
   - component: {fileID: 1130692431}
   - component: {fileID: 1130692430}
   - component: {fileID: 1130692429}
-  - component: {fileID: 1130692428}
   - component: {fileID: 1130692432}
   - component: {fileID: 1130692433}
   - component: {fileID: 1130692434}
+  - component: {fileID: 1130692435}
   m_Layer: 0
   m_Name: Cube
-  m_TagString: Untagged
+  m_TagString: AI
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!65 &1130692428
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1130692427}
-  m_Material: {fileID: 13400000, guid: 9b72ef21a99277940b72fad03e023e14, type: 2}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &1130692429
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -1007,7 +994,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1130692427}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 246.4, y: 18.8, z: 0}
+  m_LocalPosition: {x: 242.9, y: 18.8, z: 0}
   m_LocalScale: {x: 4.35, y: 22.6359, z: 1}
   m_Children:
   - {fileID: 1852105880}
@@ -1028,6 +1015,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   moveSpeed: 5
   wallTouch: 0
+  modForward: 0
+  moveDirection: 0
 --- !u!54 &1130692433
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -1037,12 +1026,12 @@ Rigidbody:
   m_GameObject: {fileID: 1130692427}
   serializedVersion: 2
   m_Mass: 1
-  m_Drag: 0
+  m_Drag: 20
   m_AngularDrag: 0.05
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 0
+  m_Constraints: 112
   m_CollisionDetection: 0
 --- !u!114 &1130692434
 MonoBehaviour:
@@ -1056,6 +1045,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ae43841b7294766499f5f3d41557530c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!65 &1130692435
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1130692427}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1.0000001, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &1138732322
 GameObject:
   m_ObjectHideFlags: 0
@@ -1529,7 +1531,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1740159949}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -14.5, y: 10.7, z: -1}
+  m_LocalPosition: {x: 3.9, y: 10.7, z: -1}
   m_LocalScale: {x: 0.16841476, y: 0.16841476, z: 2}
   m_Children:
   - {fileID: 1516660567}
@@ -1573,7 +1575,7 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1740159949}
   serializedVersion: 2
-  m_Mass: 1
+  m_Mass: 5
   m_Drag: 0
   m_AngularDrag: 0.05
   m_UseGravity: 1
@@ -1594,7 +1596,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   runSpeed: 17.5
-  jumpSpeed: 400
+  jumpSpeed: 2000
   climbSpeed: 10
   rigidbody: {fileID: 0}
   scale: {x: 0, y: 0}
@@ -1712,7 +1714,7 @@ GameObject:
   - component: {fileID: 1852105881}
   m_Layer: 1
   m_Name: Quad
-  m_TagString: Untagged
+  m_TagString: AI_SightRange
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1725,8 +1727,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1852105879}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 1, y: 0, z: 0}
-  m_LocalScale: {x: 4.121049, y: 0.98361456, z: 1}
+  m_LocalPosition: {x: 1.8045992, y: 0, z: 0}
+  m_LocalScale: {x: 4.1210494, y: 0.9836146, z: 1}
   m_Children: []
   m_Father: {fileID: 1130692431}
   m_RootOrder: 0
