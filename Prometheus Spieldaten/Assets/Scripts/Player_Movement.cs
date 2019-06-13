@@ -16,6 +16,7 @@ public class Player_Movement : MonoBehaviour
     public bool noLadder;
     public SpriteRenderer spriteRenderer;
     public bool flipX = false;
+    public float maxAcceleration;
 
 
     public void Start()
@@ -31,15 +32,13 @@ public class Player_Movement : MonoBehaviour
     public void MoveLeft()
     {
         spriteRenderer.flipX = true;
-        movingLeft = new Vector3(-runSpeed * Time.deltaTime, 0, 0);
-        transform.position = transform.position + movingLeft;
+        rigidbody.AddForce(new Vector3(Input.GetAxis("Horizontal")* runSpeed, 0.0f, 0.0f));
     }
 
     public void MoveRight()
     {
         spriteRenderer.flipX = false;
-        movingRight = new Vector3(runSpeed * Time.deltaTime, 0, 0);
-        transform.position = transform.position + movingRight;
+        rigidbody.AddForce(new Vector3(Input.GetAxis("Horizontal") * runSpeed, 0.0f, 0.0f));
     }
 
     public void Jump()
@@ -104,4 +103,5 @@ public class Player_Movement : MonoBehaviour
             rigidbody.isKinematic = false;
         }
     }
+
 }
