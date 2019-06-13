@@ -32,7 +32,7 @@ public class Player_Movement : MonoBehaviour
     public void MoveLeft()
     {
         spriteRenderer.flipX = true;
-        rigidbody.AddForce(new Vector3(Input.GetAxis("Horizontal")* runSpeed, 0.0f, 0.0f));
+        rigidbody.AddForce(new Vector3(Input.GetAxis("Horizontal") * runSpeed, 0.0f, 0.0f));
     }
 
     public void MoveRight()
@@ -103,5 +103,15 @@ public class Player_Movement : MonoBehaviour
             rigidbody.isKinematic = false;
         }
     }
+
+    //public void IgnoreCollision(Collider coll1, Collider coll2, bool ignore = true)
+    //{
+    //    if (coll1.tag == "Player" && coll2.tag == "Wall")
+    //    {
+    //        Physics.IgnoreCollision(coll1, coll2);
+
+    //    }
+    //}
+
 
 }
