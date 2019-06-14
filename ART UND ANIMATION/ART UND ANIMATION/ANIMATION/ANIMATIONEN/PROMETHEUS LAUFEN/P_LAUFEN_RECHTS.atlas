@@ -1,0 +1,76 @@
+
+P_LAUFEN_RECHTS.png
+size: 1024,1024
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+PROMETHEUS BEINE LINKS
+  rotate: false
+  xy: 858, 1
+  size: 123, 153
+  orig: 123, 153
+  offset: 0, 0
+  index: -1
+PROMETHEUS BEINE RECHTS
+  rotate: false
+  xy: 796, 468
+  size: 123, 153
+  orig: 123, 153
+  offset: 0, 0
+  index: -1
+PROMETHEUS OBERARM RECHTS2-Wiederhergestellt
+  rotate: false
+  xy: 921, 609
+  size: 100, 139
+  orig: 105, 145
+  offset: 2, 6
+  index: -1
+PROMETHEUS HAND LINKS2
+  rotate: false
+  xy: 766, 226
+  size: 167, 240
+  orig: 167, 241
+  offset: 0, 0
+  index: -1
+PROMETHEUS TOGA RECHTS2
+  rotate: false
+  xy: 1, 1
+  size: 497, 520
+  orig: 497, 520
+  offset: 0, 0
+  index: -1
+PROMETHEUS FÜßE RECHTS
+  rotate: false
+  xy: 528, 537
+  size: 266, 94
+  orig: 266, 94
+  offset: 0, 0
+  index: -1
+PROMETHEUS KOPF RECHTS
+  rotate: false
+  xy: 1, 523
+  size: 525, 481
+  orig: 525, 481
+  offset: 0, 0
+  index: -1
+PROMETHEUS UNTERER BART RECHTS 
+  rotate: false
+  xy: 528, 226
+  size: 236, 309
+  orig: 236, 309
+  offset: 0, 0
+  index: -1
+PROMETHEUS SCHNURRBART RECHTS
+  rotate: false
+  xy: 500, 1
+  size: 356, 223
+  orig: 356, 223
+  offset: 0, 0
+  index: -1
+PROMETHEUS OBERARM LINKS2-Wiederhergestellt
+  rotate: false
+  xy: 921, 468
+  size: 100, 139
+  orig: 105, 145
+  offset: 3, 6
+  index: -1
