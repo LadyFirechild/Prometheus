@@ -16,7 +16,7 @@ public class Player_Movement : MonoBehaviour
     public bool noLadder;
     public SpriteRenderer spriteRenderer;
     public bool flipX = false;
-    public float maxAcceleration;
+    public float maxSpeed = 50f;
 
 
     public void Start()
@@ -27,6 +27,7 @@ public class Player_Movement : MonoBehaviour
 
     public void FixedUpdate()
     {
+        rigidbody.velocity = Vector3.ClampMagnitude(rigidbody.velocity, maxSpeed);
     }
 
     public void MoveLeft()
