@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using DragonBones;
 
 public class Player_Movement : MonoBehaviour
 {
@@ -14,9 +15,14 @@ public class Player_Movement : MonoBehaviour
     Vector3 climbing;
     public bool grounded;
     public bool noLadder;
-    public SpriteRenderer spriteRenderer;
+    SpriteRenderer spriteRenderer;
     public bool flipX = false;
     public float maxSpeed = 50f;
+    Vector3 rbv;
+    public Armature walking;
+
+
+
 
 
     public void Start()
@@ -28,7 +34,11 @@ public class Player_Movement : MonoBehaviour
     public void FixedUpdate()
     {
         rigidbody.velocity = Vector3.ClampMagnitude(rigidbody.velocity, maxSpeed);
-
+        Vector3 rbv = rigidbody.velocity;
+        if (rbv.y <= 0)
+        {
+            rigidbody.velocity = new Vector3(rbv.x,rbv.y * 1.2f,rbv.z);
+        }
     }
 
     public void MoveLeft()
@@ -49,7 +59,8 @@ public class Player_Movement : MonoBehaviour
     {
         if (grounded == true && noLadder == true)
         {
-            rigidbody.AddForce(transform.up * jumpSpeed);
+            rigidbody.AddForce(transform.up * jumpSpeed,ForceMode.VelocityChange);
+
         }
     }
 
@@ -60,13 +71,6 @@ public class Player_Movement : MonoBehaviour
         climbing = new Vector3(0, climbSpeed * Time.deltaTime, 0);
         transform.position = transform.position + climbing;
 
-    }
-    public void Duck()
-    {
-        rigidbody.isKinematic = true;
-
-        climbing = new Vector3(0, -climbSpeed * Time.deltaTime, 0);
-        transform.position = transform.position + climbing;
     }
 
     public void OnTriggerEnter(Collider trigger)
