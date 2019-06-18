@@ -6,7 +6,7 @@ using DragonBones;
 public class Animation_Player : MonoBehaviour
 
 {
-    public UnityArmatureComponent armatureComponent;
+    public UnityArmatureComponent walkAnim;
 
 
     // Start is called before the first frame update
@@ -15,14 +15,14 @@ public class Animation_Player : MonoBehaviour
     // Update is called once per frame
     public void Start()
     {
-        armatureComponent = GetComponent<UnityArmatureComponent>();
+     
     }
 
     public void Activate()
     {
         if (Input.GetKey(KeyCode.Space))
         {
-            armatureComponent.animation.FadeIn("animtion0", 0, -4);
+            walkAnim.animation.Play("animtion0",1);
         }
     }
 }
