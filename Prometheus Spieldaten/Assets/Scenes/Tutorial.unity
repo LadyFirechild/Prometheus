@@ -7497,10 +7497,10 @@ GameObject:
   - component: {fileID: 1740159950}
   - component: {fileID: 1740159954}
   - component: {fileID: 1740159953}
-  - component: {fileID: 1740159952}
   - component: {fileID: 1740159957}
   - component: {fileID: 1740159956}
   - component: {fileID: 1740159955}
+  - component: {fileID: 1740159952}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -7574,19 +7574,20 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!65 &1740159952
-BoxCollider:
+--- !u!136 &1740159952
+CapsuleCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1740159949}
-  m_Material: {fileID: 13400000, guid: 9b72ef21a99277940b72fad03e023e14, type: 2}
+  m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 21.889864, y: 36.040535, z: 1.2877859}
-  m_Center: {x: -0.62625754, y: 2.1397028, z: 0.54389304}
+  m_Radius: 0.87980866
+  m_Height: 37.94819
+  m_Direction: 1
+  m_Center: {x: 0, y: 2.3264675, z: 0}
 --- !u!65 &1740159953
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -7598,8 +7599,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 5, y: 1.7613596, z: 1.010821}
-  m_Center: {x: 1.1251287, y: -15.305879, z: 0.40541047}
+  m_Size: {x: 12.691323, y: 2.4283638, z: 1.010821}
+  m_Center: {x: 0.72943413, y: -15.639382, z: 0.4054105}
 --- !u!54 &1740159954
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -7629,9 +7630,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   runSpeed: 30000
-  jumpSpeed: 485000
+  jumpSpeed: 1200000
   climbSpeed: 10
-  rigidbody: {fileID: 0}
+  rigidbody: {fileID: 1740159954}
   scale: {x: 0, y: 0}
   grounded: 0
   noLadder: 0

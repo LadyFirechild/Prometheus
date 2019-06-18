@@ -28,18 +28,21 @@ public class Player_Movement : MonoBehaviour
     public void FixedUpdate()
     {
         rigidbody.velocity = Vector3.ClampMagnitude(rigidbody.velocity, maxSpeed);
+
     }
 
     public void MoveLeft()
     {
         spriteRenderer.flipX = true;
         rigidbody.AddForce(new Vector3(Input.GetAxis("Horizontal") * runSpeed, 0.0f, 0.0f));
+
     }
 
     public void MoveRight()
     {
         spriteRenderer.flipX = false;
         rigidbody.AddForce(new Vector3(Input.GetAxis("Horizontal") * runSpeed, 0.0f, 0.0f));
+        
     }
 
     public void Jump()

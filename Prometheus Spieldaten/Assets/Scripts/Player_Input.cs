@@ -27,6 +27,7 @@ public class Player_Input : MonoBehaviour
             SendMessage("MoveRight", SendMessageOptions.DontRequireReceiver);
         }
 
+
         bool left3 = Input.GetKey(left1);
         bool left4 = Input.GetKey(left2);
 
@@ -35,15 +36,13 @@ public class Player_Input : MonoBehaviour
             SendMessage("MoveLeft", SendMessageOptions.DontRequireReceiver);
         }
 
-        bool jumpUp3 = Input.GetKey(jumpUp1);
-        bool jumpUp4 = Input.GetKey(jumpUp2);
+        bool jumpUp3 = Input.GetKeyDown(jumpUp1);
+        bool jumpUp4 = Input.GetKeyDown(jumpUp2);
 
         if (jumpUp3 == true || jumpUp4 == true)
         {
             if (noLadder == true)
             {
-                jumpUp3 = Input.GetKeyDown(jumpUp1);
-                jumpUp4 = Input.GetKeyDown(jumpUp2);
                 SendMessage("Jump", SendMessageOptions.DontRequireReceiver);
             }
             if (noLadder == false)
