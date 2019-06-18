@@ -19,8 +19,6 @@ public class Player_Movement : MonoBehaviour
     public bool flipX = false;
     public float maxSpeed = 50f;
     Vector3 rbv;
-    public Armature walking;
-
 
 
 
