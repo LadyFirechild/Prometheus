@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c12a74572b511d341baea2919d9c1daa, type: 3}
+  m_Name: P_SPRINGEN_RECHTS_Data
+  m_EditorClassIdentifier: 
+  dataName: P_SPRINGEN_RECHTS
+  dragonBonesJSON: {fileID: 4900000, guid: bbbe09b2c9bfab94482ee90189c43ed4, type: 3}
+  textureAtlas:
+  - textureAtlasJSON: {fileID: 4900000, guid: 353f177b674a66344b1869cd4914da73, type: 3}
+    texture: {fileID: 2800000, guid: 1f55d16bb5e2c5b4b9c7a12198541346, type: 3}
+    material: {fileID: 2100000, guid: cd7355e8be19a0e42933471d12446ec8, type: 2}
+    uiMaterial: {fileID: 0}

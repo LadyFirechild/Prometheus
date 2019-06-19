@@ -15,14 +15,20 @@ public class Animation_Player : MonoBehaviour
     // Update is called once per frame
     public void Start()
     {
-     
+        UnityFactory.factory.LoadDragonBonesData("Animation/Enemy_Rolling_ske");
+        UnityFactory.factory.LoadDragonBonesData("Animation/Enemy_Rolling_tex");
+        UnityArmatureComponent walkAnim = GetComponent<UnityArmatureComponent>();
+
+
+
     }
 
     public void Activate()
     {
         if (Input.GetKey(KeyCode.Space))
         {
-            walkAnim.animation.Play("animtion0",1);
+            walkAnim.animation.Play("animtion0");
+            walkAnim.transform.localPosition = new Vector3(0.0f, 0.0f, 0.0f);
         }
     }
 }
