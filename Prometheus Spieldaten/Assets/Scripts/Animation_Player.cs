@@ -3,11 +3,10 @@ using System.Collections.Generic;
 using UnityEngine;
 using DragonBones;
 
-namespace Prometheus
-{
+namespace Prometheus {
     public class Animation_Player : MonoBehaviour
 
-
+        
 
     {
 
@@ -31,93 +30,46 @@ namespace Prometheus
         {
             walkAnim.animation.Stop("walkAnim");
             walkAnim.animation.Stop("jumpAnim");
-            walkAnim.animation.Stop("holdAnim");
-            walkAnim.animation.Stop("pushAnim");
         }
 
         public void Update()
         {
-
-            if ((Input.GetKey(KeyCode.D) || Input.GetKey(KeyCode.RightArrow)))
+            if (playerMovement.grounded)
             {
+                walkAnim.animation.Stop("jumpAnim");
+            }
+
+            if (!walkAnim.animation.isPlaying && playerMovement.grounded && (Input.GetKey(KeyCode.D) || Input.GetKey(KeyCode.RightArrow)))
+            {
+                walkAnim.animation.Stop("jumpAnim");
+                walkAnim.animation.Play("walkAnim");
                 walkAnim.transform.localScale = new Vector3(Mathf.Abs(walkAnim.transform.localScale.x) * 1, walkAnim.transform.localScale.y, walkAnim.transform.localScale.z);
-                if (!walkAnim.animation.isPlaying && playerMovement.grounded && (Input.GetKey(KeyCode.D) || Input.GetKey(KeyCode.RightArrow)))
-                {
-
-                    walkAnim.animation.Stop("jumpAnim");
-                    walkAnim.animation.Play("walkAnim");
-                }
-
             }
-
-            if ((Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.LeftArrow)))
+            if (!walkAnim.animation.isPlaying && playerMovement.grounded && (Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.LeftArrow)))
             {
-                walkAnim.transform.localScale = new Vector3(Mathf.Abs(walkAnim.transform.localScale.x) * -1, walkAnim.transform.localScale.y, walkAnim.transform.localScale.z);
-                if (!walkAnim.animation.isPlaying && playerMovement.grounded && (Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.LeftArrow)))
-                {
-                    walkAnim.animation.Stop("jumpAnim");
-                    walkAnim.animation.Play("walkAnim");
-                }
-
+                walkAnim.animation.Stop("jumpAnim");
+                walkAnim.animation.Play("walkAnim");
+                walkAnim.transform.localScale =  new Vector3(Mathf.Abs(walkAnim.transform.localScale.x) * - 1, walkAnim.transform.localScale.y, walkAnim.transform.localScale.z);
             }
-
-            if ((Input.GetKeyUp(KeyCode.LeftArrow) || Input.GetKeyUp(KeyCode.A)) || (Input.GetKeyUp(KeyCode.RightArrow) || Input.GetKeyUp(KeyCode.D)))
+            if (Input.GetKeyUp(KeyCode.LeftArrow) || Input.GetKeyUp(KeyCode.A) || Input.GetKeyUp(KeyCode.RightArrow) || Input.GetKeyUp(KeyCode.D))
             {
+                //walkAnim.animation.Stop("walkAnim");
                 walkAnim.animation.Reset();
             }
-
-            if ((Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.LeftArrow)) && (Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.UpArrow)))
-            {
-                walkAnim.transform.localScale = new Vector3(Mathf.Abs(walkAnim.transform.localScale.x) * -1, walkAnim.transform.localScale.y, walkAnim.transform.localScale.z);
-            }
-
-            if ((Input.GetKey(KeyCode.D) || Input.GetKey(KeyCode.RightArrow)) && (Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.UpArrow)))
-            {
-                walkAnim.transform.localScale = new Vector3(Mathf.Abs(walkAnim.transform.localScale.x) * 1, walkAnim.transform.localScale.y, walkAnim.transform.localScale.z);
-            }
-
-            if (playerMovement.grounded && (Input.GetKeyDown(KeyCode.W) || Input.GetKeyDown(KeyCode.UpArrow)))
+            if (playerMovement.grounded && ((Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.LeftArrow)) && (Input.GetKeyDown(KeyCode.W) || Input.GetKeyDown(KeyCode.UpArrow))))
             {
                 walkAnim.animation.Stop("walkAnim");
-                walkAnim.animation.Play("jumpAnim", 1);
+                walkAnim.animation.Play("jumpAnim",1);
+                walkAnim.transform.localScale = new Vector3(Mathf.Abs(walkAnim.transform.localScale.x) * -1, walkAnim.transform.localScale.y, walkAnim.transform.localScale.z);
             }
-
-
-        }
-
-        public void OnCollisionEnter(Collision coll)
-        {
-            if (coll.gameObject.tag == "Moveable" && !(Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.LeftArrow) || Input.GetKey(KeyCode.RightArrow) || Input.GetKey(KeyCode.D)))
+            if (playerMovement.grounded && ((Input.GetKey(KeyCode.D) || Input.GetKey(KeyCode.RightArrow)) && (Input.GetKeyDown(KeyCode.W) || Input.GetKeyDown(KeyCode.UpArrow))))
             {
-                walkAnim.animation.Play("holdAnim", 1);
-            }
-
-            if (coll.gameObject.tag == "Moveable" && (Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.LeftArrow) || Input.GetKey(KeyCode.RightArrow) || Input.GetKey(KeyCode.D)))
-            {
-                walkAnim.animation.Play("pushAnim", 1);
-            }
-
-        }
-        public void OnCollisionStay(Collision coll)
-        {
-            if (coll.gameObject.tag == "Moveable" && !(Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.LeftArrow) || Input.GetKey(KeyCode.RightArrow) || Input.GetKey(KeyCode.D)))
-            {
-                walkAnim.animation.Play("holdAnim", 1);
-            }
-            if (coll.gameObject.tag == "Moveable" && (Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.LeftArrow) || Input.GetKey(KeyCode.RightArrow) || Input.GetKey(KeyCode.D)))
-            {
-                walkAnim.animation.Play("pushAnim", 1);
+                walkAnim.animation.Stop("walkAnim");
+                walkAnim.animation.Play("jumpAnim",1);
+                walkAnim.transform.localScale = new Vector3(Mathf.Abs(walkAnim.transform.localScale.x) * 1, walkAnim.transform.localScale.y, walkAnim.transform.localScale.z);
             }
         }
 
-        public void OnCollisionExit(Collision coll)
-        {
-            if (coll.gameObject.tag == "Moveable")
-            {
-                walkAnim.animation.Stop("holdAnim");
-                walkAnim.animation.Stop("pushAnim");
-            }
-        }
     }
 }
 
