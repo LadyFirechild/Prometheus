@@ -12,6 +12,7 @@ namespace Prometheus
     {
 
         public Player_Movement playerMovement;
+        public Player_Input playerInput;
         [SerializeField] UnityArmatureComponent walkAnim;
 
 

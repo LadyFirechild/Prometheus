@@ -14,7 +14,8 @@ namespace Prometheus
         public KeyCode left2 = KeyCode.LeftArrow;
         public KeyCode jumpUp1 = KeyCode.W;
         public KeyCode jumpUp2 = KeyCode.UpArrow;
-        public bool noLadder = true;
+        public bool right;
+        public bool left;
         public new Rigidbody rigidbody;
         public Player_Movement playerMovement;
 
@@ -22,21 +23,15 @@ namespace Prometheus
 
         public void FixedUpdate()
         {
-            bool right3 = Input.GetKey(right1);
-            bool right4 = Input.GetKey(right2);
-            bool left3 = Input.GetKey(left1);
-            bool left4 = Input.GetKey(left2);
-            if ((right3 == true || right4 == true) && (left3 == false && left4 == false))
+            right = Input.GetKey(right1) || Input.GetKey(right2);
+            left = Input.GetKey(left1) || Input.GetKey(left2);
+            if (right == true)
             {
                 SendMessage("MoveRight", SendMessageOptions.DontRequireReceiver);
                 rigidbody.velocity += new Vector3(playerMovement.maxSpeed, rigidbody.velocity.y, 0);
 
             }
-
-
-
-
-            if ((left3 == true || left4 == true) && (right3 == false && right4 == false))
+            else if (left == true)
             {
 
                 SendMessage("MoveLeft", SendMessageOptions.DontRequireReceiver);
@@ -47,7 +42,7 @@ namespace Prometheus
 
 
 
-            if (((left3 == false && left4 == false) && (right3 == false && right4 == false)) && playerMovement.grounded == true)
+            if (left == false && right == false && playerMovement.grounded == true)
             {
                 rigidbody.constraints = RigidbodyConstraints.FreezePositionX;
                 rigidbody.velocity = new Vector3(0, rigidbody.velocity.y, 0);
@@ -58,10 +53,9 @@ namespace Prometheus
             }
 
 
-            bool jumpUp3 = Input.GetKeyDown(jumpUp1);
-            bool jumpUp4 = Input.GetKeyDown(jumpUp2);
+            bool jumpUp = Input.GetKeyDown(jumpUp1) || Input.GetKeyDown(jumpUp2);
 
-            if (jumpUp3 == true || jumpUp4 == true)
+            if (jumpUp == true)
             {
                 SendMessage("Jump", SendMessageOptions.DontRequireReceiver);
             }

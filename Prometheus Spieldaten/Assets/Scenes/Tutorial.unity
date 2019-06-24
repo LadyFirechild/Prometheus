@@ -1092,7 +1092,7 @@ BoxCollider:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 78876593}
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 13400000, guid: 9b72ef21a99277940b72fad03e023e14, type: 2}
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
@@ -14540,7 +14540,7 @@ BoxCollider:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1579506854}
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 13400000, guid: 9b72ef21a99277940b72fad03e023e14, type: 2}
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
@@ -16171,6 +16171,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerMovement: {fileID: 1740159955}
+  playerInput: {fileID: 1740159957}
   walkAnim: {fileID: 773989715}
 --- !u!114 &1740159959
 MonoBehaviour:
