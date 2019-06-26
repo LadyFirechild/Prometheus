@@ -12,7 +12,6 @@ namespace Prometheus
         public new Rigidbody2D rigidbody;
         public bool grounded;
         public float maxSpeed = 50f;
-        Vector2 rbv;
 
 
 
@@ -25,28 +24,25 @@ namespace Prometheus
         public void FixedUpdate()
         {
             rigidbody.velocity = Vector2.ClampMagnitude(rigidbody.velocity, maxSpeed);
-            rbv = rigidbody.velocity;
-            if (rbv.y <= 0)
-            {
-                rigidbody.velocity = new Vector2(rbv.x, rbv.y * 1.2f);
-            }
         }
 
         public void MoveLeft()
         {
-            rigidbody.AddForce(new Vector2(Input.GetAxis("Horizontal") * runSpeed, 0.0f));
+          // rigidbody.AddForce(new Vector2(Input.GetAxis("Horizontal") * runSpeed, 0.0f));
+           rigidbody.velocity = new Vector2(rigidbody.velocity.x, rigidbody.velocity.y) + new Vector2(-maxSpeed, rigidbody.velocity.y);
         }
 
         public void MoveRight()
         {
-            rigidbody.AddForce(new Vector2(Input.GetAxis("Horizontal") * runSpeed, 0.0f));
+           // rigidbody.AddForce(new Vector2(Input.GetAxis("Horizontal") * runSpeed, 0.0f));
+            rigidbody.velocity = new Vector2(rigidbody.velocity.x, rigidbody.velocity.y) + new Vector2(maxSpeed, rigidbody.velocity.y);
         }
 
         public void Jump()
         {
             if (grounded == true)
             {
-                rigidbody.AddForce(Vector2.up * jumpSpeed);
+                rigidbody.velocity = Vector2.up * jumpSpeed;
             }
         }
 

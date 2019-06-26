@@ -12,8 +12,8 @@ namespace Prometheus
         public KeyCode right2 = KeyCode.RightArrow;
         public KeyCode left1 = KeyCode.A;
         public KeyCode left2 = KeyCode.LeftArrow;
-        public KeyCode jump1 = KeyCode.W;
-        public KeyCode jump2 = KeyCode.UpArrow;
+        public KeyCode jumpUp1 = KeyCode.W;
+        public KeyCode jumpUp2 = KeyCode.UpArrow;
         public bool right;
         public bool left;
         public new Rigidbody2D rigidbody;
@@ -27,16 +27,18 @@ namespace Prometheus
             left = Input.GetKey(left1) || Input.GetKey(left2);
             if (right)
             {
-                SendMessage("MoveRight", SendMessageOptions.DontRequireReceiver);
+                SendMessage("MoveRight", SendMessageOptions.DontRequireReceiver);        
+
             }
             else if (left)
             {
                 SendMessage("MoveLeft", SendMessageOptions.DontRequireReceiver);
+                
             }
 
 
 
-            if (!left && !right && playerMovement.grounded)
+            if (!left && !right)
             {
                 rigidbody.constraints = RigidbodyConstraints2D.FreezePositionX;
                 rigidbody.velocity = new Vector2(0, rigidbody.velocity.y);
@@ -47,7 +49,7 @@ namespace Prometheus
             }
 
 
-            jump = Input.GetKeyDown(jump1) || Input.GetKeyDown(jump2);
+            jump = Input.GetKeyDown(jumpUp1) || Input.GetKeyDown(jumpUp2);
 
             if (jump)
             {

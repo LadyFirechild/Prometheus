@@ -15,7 +15,7 @@ namespace Prometheus
 
         public void Awake()
         {
-            walkAnim = GetComponent<UnityArmatureComponent>();
+            UnityArmatureComponent walkAnim = GetComponent<UnityArmatureComponent>();
         }
 
         public void Start()
@@ -51,7 +51,7 @@ namespace Prometheus
 
             }
 
-            if (!playerInput.right || !playerInput.left)
+            if (!playerInput.right && !playerInput.left)
             {
                 walkAnim.animation.Reset();
             }
