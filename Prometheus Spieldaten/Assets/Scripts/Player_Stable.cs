@@ -6,7 +6,7 @@ public class Player_Stable : MonoBehaviour
 {
     void Update()
     {
-        transform.position = new Vector3(transform.position.x, transform.position.y, -1);
+        transform.position = new Vector2(transform.position.x, transform.position.y);
         transform.rotation = new Quaternion(0, 0, 0, 0);
     }
 }

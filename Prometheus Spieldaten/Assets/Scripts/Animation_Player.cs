@@ -6,26 +6,16 @@ using DragonBones;
 namespace Prometheus
 {
     public class Animation_Player : MonoBehaviour
-
-
-
-    {
+    { 
 
         public Player_Movement playerMovement;
         public Player_Input playerInput;
         [SerializeField] UnityArmatureComponent walkAnim;
 
 
-        // Start is called before the first frame update
-
-
-        // Update is called once per frame
-
         public void Awake()
         {
-            UnityArmatureComponent walkAnim = GetComponent<UnityArmatureComponent>();
-
-
+            walkAnim = GetComponent<UnityArmatureComponent>();
         }
 
         public void Start()
@@ -39,22 +29,10 @@ namespace Prometheus
         public void Update()
         {
 
-            if ((Input.GetKey(KeyCode.D) || Input.GetKey(KeyCode.RightArrow)))
+            if (playerInput.right)
             {
-                walkAnim.transform.localScale = new Vector3(Mathf.Abs(walkAnim.transform.localScale.x) * 1, walkAnim.transform.localScale.y, walkAnim.transform.localScale.z);
-                if (!walkAnim.animation.isPlaying && playerMovement.grounded && (Input.GetKey(KeyCode.D) || Input.GetKey(KeyCode.RightArrow)))
-                {
-
-                    walkAnim.animation.Stop("jumpAnim");
-                    walkAnim.animation.Play("walkAnim");
-                }
-
-            }
-
-            if ((Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.LeftArrow)))
-            {
-                walkAnim.transform.localScale = new Vector3(Mathf.Abs(walkAnim.transform.localScale.x) * -1, walkAnim.transform.localScale.y, walkAnim.transform.localScale.z);
-                if (!walkAnim.animation.isPlaying && playerMovement.grounded && (Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.LeftArrow)))
+                walkAnim.transform.localScale = new Vector2(Mathf.Abs(walkAnim.transform.localScale.x) * 1, walkAnim.transform.localScale.y);
+                if (!walkAnim.animation.isPlaying && playerMovement.grounded && playerInput.right)
                 {
                     walkAnim.animation.Stop("jumpAnim");
                     walkAnim.animation.Play("walkAnim");
@@ -62,55 +40,66 @@ namespace Prometheus
 
             }
 
-            if ((Input.GetKeyUp(KeyCode.LeftArrow) || Input.GetKeyUp(KeyCode.A)) || (Input.GetKeyUp(KeyCode.RightArrow) || Input.GetKeyUp(KeyCode.D)))
+            if (playerInput.left)
+            {
+                walkAnim.transform.localScale = new Vector2(Mathf.Abs(walkAnim.transform.localScale.x) * -1, walkAnim.transform.localScale.y);
+                if (!walkAnim.animation.isPlaying && playerMovement.grounded && playerInput.left)
+                {
+                    walkAnim.animation.Stop("jumpAnim");
+                    walkAnim.animation.Play("walkAnim");
+                }
+
+            }
+
+            if (!playerInput.right || !playerInput.left)
             {
                 walkAnim.animation.Reset();
             }
 
-            if ((Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.LeftArrow)) && (Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.UpArrow)))
+            if (playerInput.left && playerInput.jump)
             {
-                walkAnim.transform.localScale = new Vector3(Mathf.Abs(walkAnim.transform.localScale.x) * -1, walkAnim.transform.localScale.y, walkAnim.transform.localScale.z);
+                walkAnim.transform.localScale = new Vector2(Mathf.Abs(walkAnim.transform.localScale.x) * -1, walkAnim.transform.localScale.y);
             }
 
-            if ((Input.GetKey(KeyCode.D) || Input.GetKey(KeyCode.RightArrow)) && (Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.UpArrow)))
+            if (playerInput.right && playerInput.jump)
             {
-                walkAnim.transform.localScale = new Vector3(Mathf.Abs(walkAnim.transform.localScale.x) * 1, walkAnim.transform.localScale.y, walkAnim.transform.localScale.z);
+                walkAnim.transform.localScale = new Vector2(Mathf.Abs(walkAnim.transform.localScale.x) * 1, walkAnim.transform.localScale.y);
             }
 
-            if ( Input.GetKeyDown(KeyCode.W) || Input.GetKeyDown(KeyCode.UpArrow))
-            {;
+            if (playerInput.jump)
+            {
                 walkAnim.animation.Play("jumpAnim", 1);
             }
 
 
         }
 
-        public void OnCollisionEnter(Collision coll)
+        public void OnCollisionEnter2D(Collision2D coll)
         {
-            if (coll.gameObject.tag == "Moveable" && !(Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.LeftArrow) || Input.GetKey(KeyCode.RightArrow) || Input.GetKey(KeyCode.D)))
+            if (coll.gameObject.tag == "Moveable" && !(playerInput.left || playerInput.right))
             {
                 walkAnim.animation.Play("holdAnim", 1);
             }
 
-            if (coll.gameObject.tag == "Moveable" && (Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.LeftArrow) || Input.GetKey(KeyCode.RightArrow) || Input.GetKey(KeyCode.D)))
+            if (coll.gameObject.tag == "Moveable" && (playerInput.left || playerInput.right))
             {
                 walkAnim.animation.Play("pushAnim", 1);
             }
 
         }
-        public void OnCollisionStay(Collision coll)
+        public void OnCollisionStay2D(Collision2D coll)
         {
-            if (coll.gameObject.tag == "Moveable" && !(Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.LeftArrow) || Input.GetKey(KeyCode.RightArrow) || Input.GetKey(KeyCode.D)))
+            if (coll.gameObject.tag == "Moveable" && !(playerInput.left || playerInput.right))
             {
                 walkAnim.animation.Play("holdAnim", 1);
             }
-            if (coll.gameObject.tag == "Moveable" && (Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.LeftArrow) || Input.GetKey(KeyCode.RightArrow) || Input.GetKey(KeyCode.D)))
+            if (coll.gameObject.tag == "Moveable" && (playerInput.left || playerInput.right))
             {
                 walkAnim.animation.Play("pushAnim", 1);
             }
         }
 
-        public void OnCollisionExit(Collision coll)
+        public void OnCollisionExit2D(Collision2D coll)
         {
             if (coll.gameObject.tag == "Moveable")
             {

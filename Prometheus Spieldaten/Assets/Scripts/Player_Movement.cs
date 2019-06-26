@@ -1,7 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using DragonBones;
 
 namespace Prometheus
 {
@@ -10,117 +9,60 @@ namespace Prometheus
         public float runSpeed;
         public float jumpSpeed;
         public float climbSpeed;
-        public new Rigidbody rigidbody;
-        public Vector2 scale;
-        Vector3 movingRight;
-        Vector3 movingLeft;
-        Vector3 climbing;
+        public new Rigidbody2D rigidbody;
         public bool grounded;
-        public bool noLadder;
-        SpriteRenderer spriteRenderer;
-        public bool flipX = false;
         public float maxSpeed = 50f;
-        Vector3 rbv;
+        Vector2 rbv;
 
 
 
 
         public void Start()
         {
-            rigidbody = GetComponent<Rigidbody>();
-            spriteRenderer = GetComponent<SpriteRenderer>();
+            rigidbody = GetComponent<Rigidbody2D>();
         }
 
         public void FixedUpdate()
         {
-            rigidbody.velocity = Vector3.ClampMagnitude(rigidbody.velocity, maxSpeed);
-            Vector3 rbv = rigidbody.velocity;
+            rigidbody.velocity = Vector2.ClampMagnitude(rigidbody.velocity, maxSpeed);
+            rbv = rigidbody.velocity;
             if (rbv.y <= 0)
             {
-                rigidbody.velocity = new Vector3(rbv.x, rbv.y * 1.2f, rbv.z);
+                rigidbody.velocity = new Vector2(rbv.x, rbv.y * 1.2f);
             }
         }
 
         public void MoveLeft()
         {
-            spriteRenderer.flipX = true;
-            rigidbody.AddForce(new Vector3(Input.GetAxis("Horizontal") * runSpeed, 0.0f, 0.0f));
-
+            rigidbody.AddForce(new Vector2(Input.GetAxis("Horizontal") * runSpeed, 0.0f));
         }
 
         public void MoveRight()
         {
-            spriteRenderer.flipX = false;
-            rigidbody.AddForce(new Vector3(Input.GetAxis("Horizontal") * runSpeed, 0.0f, 0.0f));
-
+            rigidbody.AddForce(new Vector2(Input.GetAxis("Horizontal") * runSpeed, 0.0f));
         }
 
         public void Jump()
         {
-            if (grounded == true && noLadder == true)
+            if (grounded == true)
             {
-                rigidbody.AddForce(transform.up * jumpSpeed, ForceMode.VelocityChange);
-
+                rigidbody.AddForce(Vector2.up * jumpSpeed);
             }
         }
 
-        public void Climb()
+        public void OnTriggerEnter2D(Collider2D trigger)
         {
-            rigidbody.isKinematic = true;
-
-            climbing = new Vector3(0, climbSpeed * Time.deltaTime, 0);
-            transform.position = transform.position + climbing;
-
+            grounded = true;
         }
 
-        public void OnTriggerEnter(Collider trigger)
+        public void OnTriggerStay2D(Collider2D trigger)
         {
-            if (trigger.gameObject.tag != "Ladder" && trigger.gameObject.tag != "AI" && trigger.gameObject.tag != "AI_SightRange")
-            {
-                grounded = true;
-                noLadder = true;
-            }
-            if (trigger.gameObject.tag == "Ladder")
-            {
-                noLadder = false;
-            }
+            grounded = true;
         }
 
-        public void OnTriggerStay(Collider trigger)
+        public void OnTriggerExit2D(Collider2D trigger)
         {
-            if (trigger.gameObject.tag != "Ladder" && trigger.gameObject.tag != "AI" && trigger.gameObject.tag != "AI_SightRange")
-            {
-                grounded = true;
-                noLadder = true;
-            }
-            if (trigger.gameObject.tag == "Ladder")
-            {
-                noLadder = false;
-            }
+            grounded = false;
         }
-
-        public void OnTriggerExit(Collider trigger)
-        {
-            if (trigger.gameObject.tag != "Ladder" && trigger.gameObject.tag != "AI" && trigger.gameObject.tag != "AI_SightRange")
-            {
-                grounded = false;
-            }
-            if (trigger.gameObject.tag == "Ladder")
-            {
-                noLadder = true;
-                rigidbody.isKinematic = false;
-            }
-        }
-
-        //public void IgnoreCollision(Collider coll1, Collider coll2, bool ignore = true)
-        //{
-        //    if (coll1.tag == "Player" && coll2.tag == "Wall")
-        //    {
-        //        Physics.IgnoreCollision(coll1, coll2);
-
-        //    }
-        //}
-
-
     }
 }

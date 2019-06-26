@@ -12,50 +12,44 @@ namespace Prometheus
         public KeyCode right2 = KeyCode.RightArrow;
         public KeyCode left1 = KeyCode.A;
         public KeyCode left2 = KeyCode.LeftArrow;
-        public KeyCode jumpUp1 = KeyCode.W;
-        public KeyCode jumpUp2 = KeyCode.UpArrow;
+        public KeyCode jump1 = KeyCode.W;
+        public KeyCode jump2 = KeyCode.UpArrow;
         public bool right;
         public bool left;
-        public new Rigidbody rigidbody;
+        public new Rigidbody2D rigidbody;
         public Player_Movement playerMovement;
-
+        public bool jump;
 
 
         public void FixedUpdate()
         {
             right = Input.GetKey(right1) || Input.GetKey(right2);
             left = Input.GetKey(left1) || Input.GetKey(left2);
-            if (right == true)
+            if (right)
             {
                 SendMessage("MoveRight", SendMessageOptions.DontRequireReceiver);
-                rigidbody.velocity += new Vector3(playerMovement.maxSpeed, rigidbody.velocity.y, 0);
-
             }
-            else if (left == true)
+            else if (left)
             {
-
                 SendMessage("MoveLeft", SendMessageOptions.DontRequireReceiver);
-
-                rigidbody.velocity += new Vector3(-playerMovement.maxSpeed, rigidbody.velocity.y, 0);
-
             }
 
 
 
-            if (left == false && right == false && playerMovement.grounded == true)
+            if (!left && !right && playerMovement.grounded)
             {
-                rigidbody.constraints = RigidbodyConstraints.FreezePositionX;
-                rigidbody.velocity = new Vector3(0, rigidbody.velocity.y, 0);
+                rigidbody.constraints = RigidbodyConstraints2D.FreezePositionX;
+                rigidbody.velocity = new Vector2(0, rigidbody.velocity.y);
             }
             else
             {
-                rigidbody.constraints = RigidbodyConstraints.None;
+                rigidbody.constraints = RigidbodyConstraints2D.None;
             }
 
 
-            bool jumpUp = Input.GetKeyDown(jumpUp1) || Input.GetKeyDown(jumpUp2);
+            jump = Input.GetKeyDown(jump1) || Input.GetKeyDown(jump2);
 
-            if (jumpUp == true)
+            if (jump)
             {
                 SendMessage("Jump", SendMessageOptions.DontRequireReceiver);
             }
