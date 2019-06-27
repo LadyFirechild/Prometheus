@@ -28,13 +28,13 @@ namespace Prometheus
 
         public void MoveLeft()
         {
-          // rigidbody.AddForce(new Vector2(Input.GetAxis("Horizontal") * runSpeed, 0.0f));
-           rigidbody.velocity = new Vector2(rigidbody.velocity.x, rigidbody.velocity.y) + new Vector2(-maxSpeed, rigidbody.velocity.y);
+            //rigidbody.AddForce(new Vector2(Input.GetAxis("Horizontal") * runSpeed, 0.0f));
+            rigidbody.velocity = new Vector2(rigidbody.velocity.x, rigidbody.velocity.y) + new Vector2(-maxSpeed, rigidbody.velocity.y);
         }
 
         public void MoveRight()
         {
-           // rigidbody.AddForce(new Vector2(Input.GetAxis("Horizontal") * runSpeed, 0.0f));
+            // rigidbody.AddForce(new Vector2(Input.GetAxis("Horizontal") * runSpeed, 0.0f));
             rigidbody.velocity = new Vector2(rigidbody.velocity.x, rigidbody.velocity.y) + new Vector2(maxSpeed, rigidbody.velocity.y);
         }
 
