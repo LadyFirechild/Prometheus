@@ -2,99 +2,61 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Player_Input : MonoBehaviour
+
+namespace Prometheus
 {
-
-    public KeyCode right1 = KeyCode.D;
-    public KeyCode right2 = KeyCode.RightArrow;
-    public KeyCode left1 = KeyCode.A;
-    public KeyCode left2 = KeyCode.LeftArrow;
-    public KeyCode jumpUp1 = KeyCode.W;
-    public KeyCode jumpUp2 = KeyCode.UpArrow;
-    public KeyCode duck1 = KeyCode.S;
-    public KeyCode duck2 = KeyCode.DownArrow;
-    public bool noLadder = true;
-
-
-
-    public void FixedUpdate()
+    public class Player_Input : MonoBehaviour
     {
-        bool right3 = Input.GetKey(right1);
-        bool right4 = Input.GetKey(right2);
 
-        if (right3 == true || right4 == true)
+        public KeyCode right1 = KeyCode.D;
+        public KeyCode right2 = KeyCode.RightArrow;
+        public KeyCode left1 = KeyCode.A;
+        public KeyCode left2 = KeyCode.LeftArrow;
+        public KeyCode jumpUp1 = KeyCode.W;
+        public KeyCode jumpUp2 = KeyCode.UpArrow;
+        public bool right;
+        public bool left;
+        public new Rigidbody2D rigidbody;
+        public Player_Movement playerMovement;
+        public bool jump;
+
+
+        public void FixedUpdate()
         {
-            SendMessage("MoveRight", SendMessageOptions.DontRequireReceiver);
-        }
+            right = Input.GetKey(right1) || Input.GetKey(right2);
+            left = Input.GetKey(left1) || Input.GetKey(left2);
+            if (right)
+            {
+                SendMessage("MoveRight", SendMessageOptions.DontRequireReceiver);        
+
+            }
+            else if (left)
+            {
+                SendMessage("MoveLeft", SendMessageOptions.DontRequireReceiver);
+                
+            }
 
 
-        bool left3 = Input.GetKey(left1);
-        bool left4 = Input.GetKey(left2);
 
-        if (left3 == true || left4 == true)
-        {
-            SendMessage("MoveLeft", SendMessageOptions.DontRequireReceiver);
-        }
+            if (!left && !right)
+            {
+                rigidbody.constraints = RigidbodyConstraints2D.FreezePositionX;
+                rigidbody.velocity = new Vector2(0, rigidbody.velocity.y);
+            }
+            else
+            {
+                rigidbody.constraints = RigidbodyConstraints2D.None;
+            }
 
-        bool jumpUp3 = Input.GetKeyDown(jumpUp1);
-        bool jumpUp4 = Input.GetKeyDown(jumpUp2);
 
-        if (jumpUp3 == true || jumpUp4 == true)
-        {
-            if (noLadder == true)
+            jump = Input.GetKeyDown(jumpUp1) || Input.GetKeyDown(jumpUp2);
+
+            if (jump)
             {
                 SendMessage("Jump", SendMessageOptions.DontRequireReceiver);
             }
-            if (noLadder == false)
-            {
-                SendMessage("Climb", SendMessageOptions.DontRequireReceiver);
-            }
+
+
         }
-
-        bool duck3 = Input.GetKey(duck1);
-        bool duck4 = Input.GetKey(duck2);
-
-
-        if (duck3 == true || duck4 == true)
-        {
-            if (noLadder == false)
-            {
-                SendMessage("Duck", SendMessageOptions.DontRequireReceiver);
-            }
-        }
-    }
-
-    public void OnTriggerEnter(Collider trigger)
-    {
-
-        if (trigger.gameObject.tag == "Ladder")
-        {
-            noLadder = false;
-        }
-        if (trigger.gameObject.tag != "Ladder")
-        {
-            noLadder = true;
-        }
-    }
-
-    public void OnTriggerStay(Collider trigger)
-    {
-        if (trigger.gameObject.tag == "Ladder")
-        {
-            noLadder = false;
-        }
-        if (trigger.gameObject.tag != "Ladder")
-        {
-            noLadder = true;
-        }
-    }
-
-    public void OnTriggerExit(Collider trigger)
-    {
-        if (trigger.gameObject.tag == "Ladder")
-        {
-            noLadder = true;
-        }
-
     }
 }
