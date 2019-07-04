@@ -13410,6 +13410,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5229916178897429208, guid: ce8d03d02cd001447b373c177018de2a,
+        type: 3}
+      propertyPath: m_Material
+      value: 
+      objectReference: {fileID: 6200000, guid: e294ff5a316ec3b49b09f3e8e65403f8, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ce8d03d02cd001447b373c177018de2a, type: 3}
 --- !u!1 &1678129716
@@ -13965,7 +13970,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a183ad1d4a0612a448e7a53ddd9d15fb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fallMultiplier: 2
+  fallMultiplier: 3
 --- !u!4 &1740159951
 Transform:
   m_ObjectHideFlags: 0
@@ -14071,7 +14076,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   runSpeed: 2000
-  jumpSpeed: 50
+  jumpSpeed: 9000
   climbSpeed: 10
   rigidbody: {fileID: 0}
   grounded: 0

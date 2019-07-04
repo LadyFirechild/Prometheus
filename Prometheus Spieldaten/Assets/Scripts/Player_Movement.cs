@@ -42,7 +42,7 @@ namespace Prometheus
         {
             if (grounded == true)
             {
-                rigidbody.velocity = Vector2.up * jumpSpeed;
+                rigidbody.AddForce(new Vector2(0, jumpSpeed));
             }
         }
 
