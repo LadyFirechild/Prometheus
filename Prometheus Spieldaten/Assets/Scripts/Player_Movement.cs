@@ -10,6 +10,7 @@ namespace Prometheus
         public new Rigidbody2D rigidbody;
         public bool grounded;
         public float maxSpeed = 50f;
+        [SerializeField] private LayerMask whatIsGround;
 
         public void Start()
         {
@@ -43,12 +44,16 @@ namespace Prometheus
 
         public void OnTriggerEnter2D(Collider2D trigger)
         {
-            grounded = true;
+            if (trigger.gameObject.layer == whatIsGround)
+            {
+                grounded = true;
+            }
         }
 
         public void OnTriggerStay2D(Collider2D trigger)
         {
             grounded = true;
+            //rigidbody.velocity = (rigidbody.velocity.x, 0f);
         }
 
         public void OnTriggerExit2D(Collider2D trigger)

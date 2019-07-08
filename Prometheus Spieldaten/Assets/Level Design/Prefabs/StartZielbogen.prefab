@@ -90,7 +90,7 @@ GameObject:
   - component: {fileID: 6965598767827591473}
   - component: {fileID: 6965598767827591472}
   m_Layer: 0
-  m_Name: prefab StartZielbogen
+  m_Name: StartZielbogen
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -104,8 +104,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6965598767827591375}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 190.6, y: -115.8, z: 0}
-  m_LocalScale: {x: 9, y: 10, z: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 10, y: 10.5, z: 1}
   m_Children:
   - {fileID: 2741183605515454675}
   - {fileID: 1325556360785352074}
