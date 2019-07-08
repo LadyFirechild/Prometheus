@@ -466,9 +466,10 @@ MonoBehaviour:
   Player: {fileID: 782195396}
   spriteRenderer: {fileID: 459077201}
   boxCollider2D: {fileID: 459077200}
-  bigMultiplier: 1.3333334
+  bigMultiplier: 9.5
   bigMultiplierReverse: 0
-  timeLeft: 10
+  timeLeft: 3
+  counter: 0
 --- !u!61 &459077200 stripped
 BoxCollider2D:
   m_CorrespondingSourceObject: {fileID: 7683399259439757125, guid: c16c61825dc648344abb8a40f67ef5e4,
@@ -608,7 +609,8 @@ MonoBehaviour:
   boxCollider2D: {fileID: 479918178}
   smallMultiplier: 0.6666667
   smallMultiplierReverse: 0
-  timeLeft: 10
+  timeLeft: 3
+  counter: 0
 --- !u!61 &479918178 stripped
 BoxCollider2D:
   m_CorrespondingSourceObject: {fileID: 7683399259439757125, guid: c16c61825dc648344abb8a40f67ef5e4,

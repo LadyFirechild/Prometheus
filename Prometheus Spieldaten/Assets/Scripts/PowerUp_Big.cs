@@ -13,17 +13,18 @@ namespace Prometheus
         public float bigMultiplier = 4 / 3;
         public float bigMultiplierReverse;
         public int timeLeft = 10;
+        public int counter;
 
         public void Start()
         {
-
+            counter = timeLeft;
             bigMultiplierReverse = Mathf.Pow(bigMultiplier, -1f);
         }
         public void Update()
         {
-            if (timeLeft == 0)
+            if (counter == 0)
             {
-                timeLeft = 10;
+                counter = timeLeft;
                 Player.transform.localScale = new Vector3(Player.transform.localScale.x * bigMultiplierReverse, Player.transform.localScale.y * bigMultiplierReverse, Player.transform.localScale.z);
                 spriteRenderer.enabled = true;
                 boxCollider2D.enabled = true;
@@ -43,11 +44,12 @@ namespace Prometheus
 
         public IEnumerator Countdown()
         {
-            while (timeLeft > 0)
+            counter = timeLeft;
+            while (counter > 0)
             {
                 yield return new WaitForSeconds(1);
                 Debug.Log("-1 Second");
-                timeLeft--;
+                counter--;
             }
         }
     }
