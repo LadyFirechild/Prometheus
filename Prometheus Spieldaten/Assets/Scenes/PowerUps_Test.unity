@@ -466,7 +466,7 @@ MonoBehaviour:
   Player: {fileID: 782195396}
   spriteRenderer: {fileID: 459077201}
   boxCollider2D: {fileID: 459077200}
-  bigMultiplier: 9.5
+  bigMultiplier: 1.3333334
   bigMultiplierReverse: 0
   timeLeft: 3
   counter: 0

@@ -48,7 +48,11 @@ namespace Prometheus
                 rigidbody.constraints = RigidbodyConstraints2D.None;
             }
 
-            jump = Input.GetKeyDown(jumpUp1) || Input.GetKeyDown(jumpUp2);
+        }
+        public void Update()
+        {
+            
+        jump = Input.GetKeyDown(jumpUp1) || Input.GetKeyDown(jumpUp2);
 
             if (jump)
             {
