@@ -11,9 +11,6 @@ namespace Prometheus
         public bool grounded;
         public float maxSpeed = 50f;
 
-
-
-
         public void Start()
         {
             rigidbody = GetComponent<Rigidbody2D>();
@@ -58,5 +55,6 @@ namespace Prometheus
         {
             grounded = false;
         }
+
     }
 }
