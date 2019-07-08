@@ -6,9 +6,7 @@ namespace Prometheus
 {
     public class Player_Movement : MonoBehaviour
     {
-        public float runSpeed;
         public float jumpSpeed;
-        public float climbSpeed;
         public new Rigidbody2D rigidbody;
         public bool grounded;
         public float maxSpeed = 50f;
