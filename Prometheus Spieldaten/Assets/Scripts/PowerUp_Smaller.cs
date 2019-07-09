@@ -36,7 +36,7 @@ namespace Prometheus
         }
         public void OnTriggerEnter2D(Collider2D other)
         {
-            if (other.gameObject.tag == "Player" && !PoUpBi.big)
+            if (other.gameObject.tag == "Player" && !PoUpBi.big && !small)
             {
                 small = true;
                 StartCoroutine(Countdown());
