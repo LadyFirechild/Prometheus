@@ -28,10 +28,40 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 7683399259439757125, guid: c16c61825dc648344abb8a40f67ef5e4,
+        type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7683399259439757125, guid: c16c61825dc648344abb8a40f67ef5e4,
+        type: 3}
+      propertyPath: m_UsedByEffector
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7683399259439757125, guid: c16c61825dc648344abb8a40f67ef5e4,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7262207768149871940, guid: c16c61825dc648344abb8a40f67ef5e4,
+        type: 3}
+      propertyPath: m_FlipX
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7262207768149871940, guid: c16c61825dc648344abb8a40f67ef5e4,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 9123000309257158880, guid: c16c61825dc648344abb8a40f67ef5e4,
         type: 3}
       propertyPath: m_Name
       value: small_pU Variant
+      objectReference: {fileID: 0}
+    - target: {fileID: 9123000309257158880, guid: c16c61825dc648344abb8a40f67ef5e4,
+        type: 3}
+      propertyPath: m_TagString
+      value: PowerUp
       objectReference: {fileID: 0}
     - target: {fileID: 6464437123200426961, guid: c16c61825dc648344abb8a40f67ef5e4,
         type: 3}
@@ -97,31 +127,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalScale.y
       value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 7683399259439757125, guid: c16c61825dc648344abb8a40f67ef5e4,
-        type: 3}
-      propertyPath: m_IsTrigger
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7683399259439757125, guid: c16c61825dc648344abb8a40f67ef5e4,
-        type: 3}
-      propertyPath: m_UsedByEffector
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7683399259439757125, guid: c16c61825dc648344abb8a40f67ef5e4,
-        type: 3}
-      propertyPath: m_Enabled
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7262207768149871940, guid: c16c61825dc648344abb8a40f67ef5e4,
-        type: 3}
-      propertyPath: m_FlipX
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7262207768149871940, guid: c16c61825dc648344abb8a40f67ef5e4,
-        type: 3}
-      propertyPath: m_Enabled
-      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c16c61825dc648344abb8a40f67ef5e4, type: 3}
