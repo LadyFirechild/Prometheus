@@ -11,10 +11,12 @@ namespace Prometheus
         public GameObject Player;
         public SpriteRenderer spriteRenderer;
         public BoxCollider2D boxCollider2D;
+        public PowerUp_Big PoUpBi;
         public float smallMultiplier = 2 / 3;
         public float smallMultiplierReverse;
         public int timeLeft = 10;
         public int counter;
+        public bool small = false;
 
         public void Start()
         {
@@ -25,6 +27,7 @@ namespace Prometheus
         {
             if (counter == 0)
             {
+                small = false;
                 counter = timeLeft;
                 Player.transform.localScale = new Vector3(Player.transform.localScale.x * smallMultiplierReverse, Player.transform.localScale.y * smallMultiplierReverse, Player.transform.localScale.z);
                 spriteRenderer.enabled = true;
@@ -33,10 +36,11 @@ namespace Prometheus
         }
         public void OnTriggerEnter2D(Collider2D other)
         {
-            if (other.gameObject.tag == "Player")
+            if (other.gameObject.tag == "Player" && !PoUpBi.big)
             {
+                small = true;
                 StartCoroutine(Countdown());
-                Debug.Log("Collected");
+
                 spriteRenderer.enabled = false;
                 boxCollider2D.enabled = false;
                 other.gameObject.transform.localScale = new Vector3(other.gameObject.transform.localScale.x * smallMultiplier, other.gameObject.transform.localScale.y * smallMultiplier, other.gameObject.transform.localScale.z);
@@ -48,7 +52,6 @@ namespace Prometheus
             while (counter > 0)
             {
                 yield return new WaitForSeconds(1);
-                Debug.Log("-1 Second");
                 counter--;
             }
         }

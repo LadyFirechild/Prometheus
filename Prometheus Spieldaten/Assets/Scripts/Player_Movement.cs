@@ -10,35 +10,72 @@ namespace Prometheus
         public new Rigidbody2D rigidbody;
         public bool grounded;
         public float maxSpeed = 50f;
+        public PowerUp_Big PoUpBi;
+        public PowerUp_Smaller PoUpSm;
         [SerializeField] private LayerMask whatIsGround;
+        public Vector2 clampRbv;
 
         public void Start()
         {
-            rigidbody = GetComponent<Rigidbody2D>();
+            rigidbody = GetComponent<Rigidbody2D>();    
         }
 
         public void FixedUpdate()
         {
-            rigidbody.velocity = Vector2.ClampMagnitude(rigidbody.velocity, maxSpeed);
+            clampRbv = rigidbody.velocity;
+            clampRbv.x = Mathf.Clamp(clampRbv.x, -maxSpeed, maxSpeed);
+            rigidbody.velocity = clampRbv;
         }
 
         public void MoveLeft()
         {
-            //rigidbody.AddForce(new Vector2(Input.GetAxis("Horizontal") * runSpeed, 0.0f));
-            rigidbody.velocity = new Vector2(rigidbody.velocity.x, rigidbody.velocity.y) + new Vector2(-maxSpeed, rigidbody.velocity.y);
+            if (!PoUpBi.big && !PoUpSm.small)
+            {
+                rigidbody.velocity =new Vector2(-maxSpeed, rigidbody.velocity.y);
+            }
+            if (PoUpBi.big)
+            {
+                rigidbody.velocity =new Vector2(-maxSpeed * PoUpBi.bigMultiplier, rigidbody.velocity.y);
+            }
+            if (PoUpSm.small)
+            {
+                rigidbody.velocity =new Vector2(-maxSpeed * PoUpSm.smallMultiplier, rigidbody.velocity.y);
+            }
         }
 
         public void MoveRight()
         {
-            // rigidbody.AddForce(new Vector2(Input.GetAxis("Horizontal") * runSpeed, 0.0f));
-            rigidbody.velocity = new Vector2(rigidbody.velocity.x, rigidbody.velocity.y) + new Vector2(maxSpeed, rigidbody.velocity.y);
+            if (!PoUpBi.big && !PoUpSm.small)
+            {
+                rigidbody.velocity = new Vector2(maxSpeed, rigidbody.velocity.y);
+            }
+            if (PoUpBi.big)
+            {
+                rigidbody.velocity = new Vector2(maxSpeed * PoUpBi.bigMultiplier, rigidbody.velocity.y);
+            }
+            if (PoUpSm.small)
+            {
+                rigidbody.velocity = new Vector2(maxSpeed * PoUpSm.smallMultiplier, rigidbody.velocity.y);
+            }
         }
 
         public void Jump()
         {
             if (grounded == true)
             {
-                rigidbody.AddForce(new Vector2(0, jumpSpeed));
+                
+                if (!PoUpBi.big && !PoUpSm.small)
+                {
+                    rigidbody.AddForce(new Vector2(0, jumpSpeed),ForceMode2D.Impulse);
+                }
+                if (PoUpBi.big)
+                {
+                    rigidbody.AddForce(new Vector2(0, jumpSpeed * PoUpBi.bigMultiplier),ForceMode2D.Impulse);
+                }
+                if (PoUpSm.small)
+                {
+                    rigidbody.AddForce(new Vector2(0, jumpSpeed * PoUpSm.smallMultiplier), ForceMode2D.Impulse);
+                }
             }
         }
 
@@ -53,7 +90,6 @@ namespace Prometheus
         public void OnTriggerStay2D(Collider2D trigger)
         {
             grounded = true;
-            //rigidbody.velocity = (rigidbody.velocity.x, 0f);
         }
 
         public void OnTriggerExit2D(Collider2D trigger)

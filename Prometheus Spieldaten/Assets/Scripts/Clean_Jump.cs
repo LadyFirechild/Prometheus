@@ -16,9 +16,8 @@ public class Clean_Jump : MonoBehaviour
     void Update()
     {
         if (rigidbody.velocity.y < 0)
-        {
-            fallMultiplier = Mathf.Pow(fallMultiplier, exponent);
-            rigidbody.velocity += Vector2.up * Physics2D.gravity.y * (fallMultiplier - 1 ) * Time.deltaTime;
+        {         
+            rigidbody.velocity += Vector2.up * Physics2D.gravity.y * (Mathf.Pow(fallMultiplier, exponent) - 1 ) * Time.deltaTime;
         }
     }
 }
