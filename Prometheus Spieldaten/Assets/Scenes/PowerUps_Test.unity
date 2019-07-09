@@ -2810,10 +2810,23 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 479918177, guid: 26c872d483f52864d9eee672cad1a4d6, type: 3}
+      propertyPath: Player
+      value: 
+      objectReference: {fileID: 782195396}
+    - target: {fileID: 479918177, guid: 26c872d483f52864d9eee672cad1a4d6, type: 3}
+      propertyPath: PoUpBi
+      value: 
+      objectReference: {fileID: 459077199}
     - target: {fileID: 1273740361008904368, guid: 26c872d483f52864d9eee672cad1a4d6,
         type: 3}
       propertyPath: m_Name
       value: small_pU
+      objectReference: {fileID: 0}
+    - target: {fileID: 1273740361008904368, guid: 26c872d483f52864d9eee672cad1a4d6,
+        type: 3}
+      propertyPath: m_TagString
+      value: PowerUp
       objectReference: {fileID: 0}
     - target: {fileID: 3927173227628698497, guid: 26c872d483f52864d9eee672cad1a4d6,
         type: 3}
@@ -2870,14 +2883,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 479918177, guid: 26c872d483f52864d9eee672cad1a4d6, type: 3}
-      propertyPath: Player
-      value: 
-      objectReference: {fileID: 782195396}
-    - target: {fileID: 479918177, guid: 26c872d483f52864d9eee672cad1a4d6, type: 3}
-      propertyPath: PoUpBi
-      value: 
-      objectReference: {fileID: 459077199}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 26c872d483f52864d9eee672cad1a4d6, type: 3}
 --- !u!1001 &9083007531508155138
@@ -2887,10 +2892,23 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 459077199, guid: f09613eb1c498a94a8262be397cf5781, type: 3}
+      propertyPath: Player
+      value: 
+      objectReference: {fileID: 782195396}
+    - target: {fileID: 459077199, guid: f09613eb1c498a94a8262be397cf5781, type: 3}
+      propertyPath: PoUpSm
+      value: 
+      objectReference: {fileID: 479918177}
     - target: {fileID: 42286443236455855, guid: f09613eb1c498a94a8262be397cf5781,
         type: 3}
       propertyPath: m_Name
       value: big_pU
+      objectReference: {fileID: 0}
+    - target: {fileID: 42286443236455855, guid: f09613eb1c498a94a8262be397cf5781,
+        type: 3}
+      propertyPath: m_TagString
+      value: PowerUp
       objectReference: {fileID: 0}
     - target: {fileID: 2862908829620016798, guid: f09613eb1c498a94a8262be397cf5781,
         type: 3}
@@ -2947,13 +2965,5 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 459077199, guid: f09613eb1c498a94a8262be397cf5781, type: 3}
-      propertyPath: Player
-      value: 
-      objectReference: {fileID: 782195396}
-    - target: {fileID: 459077199, guid: f09613eb1c498a94a8262be397cf5781, type: 3}
-      propertyPath: PoUpSm
-      value: 
-      objectReference: {fileID: 479918177}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f09613eb1c498a94a8262be397cf5781, type: 3}
