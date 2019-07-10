@@ -5,8 +5,6 @@ using UnityEngine;
 public class LightningScreen : MonoBehaviour
 {
     public GameObject lightning;
-    public GameObject Player;
-    public Vector3 cam;
 
     public void Update()
     {
@@ -18,11 +16,11 @@ public class LightningScreen : MonoBehaviour
 
     public void PlaceLightning()
     {
-        float spawnY = Random.Range(Camera.main.ScreenToWorldPoint(new Vector2(0, 0)).y, Camera.main.ScreenToWorldPoint(new Vector2(0, Screen.height)).y);
-        float spawnX = Random.Range(Camera.main.ScreenToWorldPoint(new Vector2(0, 0)).x, Camera.main.ScreenToWorldPoint(new Vector2(Screen.width, 0)).x);
+        float horizontal = Random.Range(Camera.main.ScreenToWorldPoint(new Vector2(0, 0)).x, Camera.main.ScreenToWorldPoint(new Vector2(Screen.width, 0)).x);
+        float vertical = Random.Range(Camera.main.ScreenToWorldPoint(new Vector2(0, 0)).y, Camera.main.ScreenToWorldPoint(new Vector2(0, Screen.height)).y);
 
-        Vector2 spawnPosition = new Vector2(spawnX, spawnY);
-        Instantiate(lightning, spawnPosition, Quaternion.identity);
+        Vector2 randomSpawn = new Vector2(vertical, horizontal);
+        Instantiate(lightning, randomSpawn, Quaternion.identity);
 
     }
 }
