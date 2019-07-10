@@ -15,7 +15,8 @@ public class Fire_Turn_On : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        if (gameObject.tag == "Player")
+        Debug.Log("Hi");
+        if (other.gameObject.tag == "Player")
         {
             particles.gameObject.SetActive(true);
             GlobalEvent.ActivatedFire?.Invoke(this.gameObject);

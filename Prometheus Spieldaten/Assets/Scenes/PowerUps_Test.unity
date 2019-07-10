@@ -120,6 +120,144 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1001 &39134988
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 7337232074560184457, guid: 7f9ba7b4f24d9ed498b193bc0d25d8c5,
+        type: 3}
+      propertyPath: m_Name
+      value: "Feuerschale-auf-S\xE4ule (5)"
+      objectReference: {fileID: 0}
+    - target: {fileID: 1529574475837598470, guid: 7f9ba7b4f24d9ed498b193bc0d25d8c5,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 1529574475837598470, guid: 7f9ba7b4f24d9ed498b193bc0d25d8c5,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 9.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 1529574475837598470, guid: 7f9ba7b4f24d9ed498b193bc0d25d8c5,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1529574475837598470, guid: 7f9ba7b4f24d9ed498b193bc0d25d8c5,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1529574475837598470, guid: 7f9ba7b4f24d9ed498b193bc0d25d8c5,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1529574475837598470, guid: 7f9ba7b4f24d9ed498b193bc0d25d8c5,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1529574475837598470, guid: 7f9ba7b4f24d9ed498b193bc0d25d8c5,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1529574475837598470, guid: 7f9ba7b4f24d9ed498b193bc0d25d8c5,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 1529574475837598470, guid: 7f9ba7b4f24d9ed498b193bc0d25d8c5,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1529574475837598470, guid: 7f9ba7b4f24d9ed498b193bc0d25d8c5,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1529574475837598470, guid: 7f9ba7b4f24d9ed498b193bc0d25d8c5,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 7f9ba7b4f24d9ed498b193bc0d25d8c5, type: 3}
+--- !u!1001 &83090675
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 7337232074560184457, guid: 7f9ba7b4f24d9ed498b193bc0d25d8c5,
+        type: 3}
+      propertyPath: m_Name
+      value: "Feuerschale-auf-S\xE4ule (4)"
+      objectReference: {fileID: 0}
+    - target: {fileID: 1529574475837598470, guid: 7f9ba7b4f24d9ed498b193bc0d25d8c5,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -27.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1529574475837598470, guid: 7f9ba7b4f24d9ed498b193bc0d25d8c5,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 9.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 1529574475837598470, guid: 7f9ba7b4f24d9ed498b193bc0d25d8c5,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1529574475837598470, guid: 7f9ba7b4f24d9ed498b193bc0d25d8c5,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1529574475837598470, guid: 7f9ba7b4f24d9ed498b193bc0d25d8c5,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1529574475837598470, guid: 7f9ba7b4f24d9ed498b193bc0d25d8c5,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1529574475837598470, guid: 7f9ba7b4f24d9ed498b193bc0d25d8c5,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1529574475837598470, guid: 7f9ba7b4f24d9ed498b193bc0d25d8c5,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 1529574475837598470, guid: 7f9ba7b4f24d9ed498b193bc0d25d8c5,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1529574475837598470, guid: 7f9ba7b4f24d9ed498b193bc0d25d8c5,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1529574475837598470, guid: 7f9ba7b4f24d9ed498b193bc0d25d8c5,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 7f9ba7b4f24d9ed498b193bc0d25d8c5, type: 3}
 --- !u!1 &95352407
 GameObject:
   m_ObjectHideFlags: 1
@@ -521,6 +659,75 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!1001 &611798680
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 7337232074560184457, guid: 7f9ba7b4f24d9ed498b193bc0d25d8c5,
+        type: 3}
+      propertyPath: m_Name
+      value: "Feuerschale-auf-S\xE4ule (7)"
+      objectReference: {fileID: 0}
+    - target: {fileID: 1529574475837598470, guid: 7f9ba7b4f24d9ed498b193bc0d25d8c5,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 19.7
+      objectReference: {fileID: 0}
+    - target: {fileID: 1529574475837598470, guid: 7f9ba7b4f24d9ed498b193bc0d25d8c5,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 9.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 1529574475837598470, guid: 7f9ba7b4f24d9ed498b193bc0d25d8c5,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1529574475837598470, guid: 7f9ba7b4f24d9ed498b193bc0d25d8c5,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1529574475837598470, guid: 7f9ba7b4f24d9ed498b193bc0d25d8c5,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1529574475837598470, guid: 7f9ba7b4f24d9ed498b193bc0d25d8c5,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1529574475837598470, guid: 7f9ba7b4f24d9ed498b193bc0d25d8c5,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1529574475837598470, guid: 7f9ba7b4f24d9ed498b193bc0d25d8c5,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 14
+      objectReference: {fileID: 0}
+    - target: {fileID: 1529574475837598470, guid: 7f9ba7b4f24d9ed498b193bc0d25d8c5,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1529574475837598470, guid: 7f9ba7b4f24d9ed498b193bc0d25d8c5,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1529574475837598470, guid: 7f9ba7b4f24d9ed498b193bc0d25d8c5,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 7f9ba7b4f24d9ed498b193bc0d25d8c5, type: 3}
 --- !u!1001 &651112829
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -590,6 +797,120 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c16c61825dc648344abb8a40f67ef5e4, type: 3}
+--- !u!1 &659179609
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 659179611}
+  - component: {fileID: 659179610}
+  m_Layer: 0
+  m_Name: GameObject
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &659179610
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 659179609}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 34aeb08397705d34e905dbefe32aad83, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  collectible: 0
+  activeFires: 0
+--- !u!4 &659179611
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 659179609}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -9.238346, y: 4.7321744, z: -1031.9773}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 7
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &687555382
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 7337232074560184457, guid: 7f9ba7b4f24d9ed498b193bc0d25d8c5,
+        type: 3}
+      propertyPath: m_Name
+      value: "Feuerschale-auf-S\xE4ule (1)"
+      objectReference: {fileID: 0}
+    - target: {fileID: 1529574475837598470, guid: 7f9ba7b4f24d9ed498b193bc0d25d8c5,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -46
+      objectReference: {fileID: 0}
+    - target: {fileID: 1529574475837598470, guid: 7f9ba7b4f24d9ed498b193bc0d25d8c5,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 9.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 1529574475837598470, guid: 7f9ba7b4f24d9ed498b193bc0d25d8c5,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1529574475837598470, guid: 7f9ba7b4f24d9ed498b193bc0d25d8c5,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1529574475837598470, guid: 7f9ba7b4f24d9ed498b193bc0d25d8c5,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1529574475837598470, guid: 7f9ba7b4f24d9ed498b193bc0d25d8c5,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1529574475837598470, guid: 7f9ba7b4f24d9ed498b193bc0d25d8c5,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1529574475837598470, guid: 7f9ba7b4f24d9ed498b193bc0d25d8c5,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 1529574475837598470, guid: 7f9ba7b4f24d9ed498b193bc0d25d8c5,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1529574475837598470, guid: 7f9ba7b4f24d9ed498b193bc0d25d8c5,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1529574475837598470, guid: 7f9ba7b4f24d9ed498b193bc0d25d8c5,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 7f9ba7b4f24d9ed498b193bc0d25d8c5, type: 3}
 --- !u!1 &782195396
 GameObject:
   m_ObjectHideFlags: 0
@@ -1078,6 +1399,75 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!1001 &841539280
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 7337232074560184457, guid: 7f9ba7b4f24d9ed498b193bc0d25d8c5,
+        type: 3}
+      propertyPath: m_Name
+      value: "Feuerschale-auf-S\xE4ule (2)"
+      objectReference: {fileID: 0}
+    - target: {fileID: 1529574475837598470, guid: 7f9ba7b4f24d9ed498b193bc0d25d8c5,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -55.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1529574475837598470, guid: 7f9ba7b4f24d9ed498b193bc0d25d8c5,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 9.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 1529574475837598470, guid: 7f9ba7b4f24d9ed498b193bc0d25d8c5,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1529574475837598470, guid: 7f9ba7b4f24d9ed498b193bc0d25d8c5,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1529574475837598470, guid: 7f9ba7b4f24d9ed498b193bc0d25d8c5,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1529574475837598470, guid: 7f9ba7b4f24d9ed498b193bc0d25d8c5,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1529574475837598470, guid: 7f9ba7b4f24d9ed498b193bc0d25d8c5,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1529574475837598470, guid: 7f9ba7b4f24d9ed498b193bc0d25d8c5,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 1529574475837598470, guid: 7f9ba7b4f24d9ed498b193bc0d25d8c5,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1529574475837598470, guid: 7f9ba7b4f24d9ed498b193bc0d25d8c5,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1529574475837598470, guid: 7f9ba7b4f24d9ed498b193bc0d25d8c5,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 7f9ba7b4f24d9ed498b193bc0d25d8c5, type: 3}
 --- !u!1 &923986173
 GameObject:
   m_ObjectHideFlags: 0
@@ -1705,6 +2095,75 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!1001 &1330182463
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 7337232074560184457, guid: 7f9ba7b4f24d9ed498b193bc0d25d8c5,
+        type: 3}
+      propertyPath: m_Name
+      value: "Feuerschale-auf-S\xE4ule (6)"
+      objectReference: {fileID: 0}
+    - target: {fileID: 1529574475837598470, guid: 7f9ba7b4f24d9ed498b193bc0d25d8c5,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 11.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1529574475837598470, guid: 7f9ba7b4f24d9ed498b193bc0d25d8c5,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 9.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 1529574475837598470, guid: 7f9ba7b4f24d9ed498b193bc0d25d8c5,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1529574475837598470, guid: 7f9ba7b4f24d9ed498b193bc0d25d8c5,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1529574475837598470, guid: 7f9ba7b4f24d9ed498b193bc0d25d8c5,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1529574475837598470, guid: 7f9ba7b4f24d9ed498b193bc0d25d8c5,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1529574475837598470, guid: 7f9ba7b4f24d9ed498b193bc0d25d8c5,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1529574475837598470, guid: 7f9ba7b4f24d9ed498b193bc0d25d8c5,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 13
+      objectReference: {fileID: 0}
+    - target: {fileID: 1529574475837598470, guid: 7f9ba7b4f24d9ed498b193bc0d25d8c5,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1529574475837598470, guid: 7f9ba7b4f24d9ed498b193bc0d25d8c5,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1529574475837598470, guid: 7f9ba7b4f24d9ed498b193bc0d25d8c5,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 7f9ba7b4f24d9ed498b193bc0d25d8c5, type: 3}
 --- !u!1 &1341894883
 GameObject:
   m_ObjectHideFlags: 1
@@ -2649,6 +3108,75 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!1001 &1986578609
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 7337232074560184457, guid: 7f9ba7b4f24d9ed498b193bc0d25d8c5,
+        type: 3}
+      propertyPath: m_Name
+      value: "Feuerschale-auf-S\xE4ule (3)"
+      objectReference: {fileID: 0}
+    - target: {fileID: 1529574475837598470, guid: 7f9ba7b4f24d9ed498b193bc0d25d8c5,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -64.7
+      objectReference: {fileID: 0}
+    - target: {fileID: 1529574475837598470, guid: 7f9ba7b4f24d9ed498b193bc0d25d8c5,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 9.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 1529574475837598470, guid: 7f9ba7b4f24d9ed498b193bc0d25d8c5,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1529574475837598470, guid: 7f9ba7b4f24d9ed498b193bc0d25d8c5,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1529574475837598470, guid: 7f9ba7b4f24d9ed498b193bc0d25d8c5,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1529574475837598470, guid: 7f9ba7b4f24d9ed498b193bc0d25d8c5,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1529574475837598470, guid: 7f9ba7b4f24d9ed498b193bc0d25d8c5,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1529574475837598470, guid: 7f9ba7b4f24d9ed498b193bc0d25d8c5,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 1529574475837598470, guid: 7f9ba7b4f24d9ed498b193bc0d25d8c5,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1529574475837598470, guid: 7f9ba7b4f24d9ed498b193bc0d25d8c5,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1529574475837598470, guid: 7f9ba7b4f24d9ed498b193bc0d25d8c5,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 7f9ba7b4f24d9ed498b193bc0d25d8c5, type: 3}
 --- !u!1 &2077107850
 GameObject:
   m_ObjectHideFlags: 0
@@ -2803,69 +3331,69 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!1001 &2979060610307615891
+--- !u!1001 &3974213892622561509
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 2979060610081842729, guid: 7f9ba7b4f24d9ed498b193bc0d25d8c5,
+    - target: {fileID: 7337232074560184457, guid: 7f9ba7b4f24d9ed498b193bc0d25d8c5,
         type: 3}
       propertyPath: m_Name
       value: "Feuerschale-auf-S\xE4ule"
       objectReference: {fileID: 0}
-    - target: {fileID: 2979060610081842733, guid: 7f9ba7b4f24d9ed498b193bc0d25d8c5,
+    - target: {fileID: 1529574475837598470, guid: 7f9ba7b4f24d9ed498b193bc0d25d8c5,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -45.25564
+      value: -36.41357
       objectReference: {fileID: 0}
-    - target: {fileID: 2979060610081842733, guid: 7f9ba7b4f24d9ed498b193bc0d25d8c5,
+    - target: {fileID: 1529574475837598470, guid: 7f9ba7b4f24d9ed498b193bc0d25d8c5,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 9.6
+      value: 9.3
       objectReference: {fileID: 0}
-    - target: {fileID: 2979060610081842733, guid: 7f9ba7b4f24d9ed498b193bc0d25d8c5,
+    - target: {fileID: 1529574475837598470, guid: 7f9ba7b4f24d9ed498b193bc0d25d8c5,
         type: 3}
       propertyPath: m_LocalPosition.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 2979060610081842733, guid: 7f9ba7b4f24d9ed498b193bc0d25d8c5,
+    - target: {fileID: 1529574475837598470, guid: 7f9ba7b4f24d9ed498b193bc0d25d8c5,
         type: 3}
       propertyPath: m_LocalRotation.x
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 2979060610081842733, guid: 7f9ba7b4f24d9ed498b193bc0d25d8c5,
+    - target: {fileID: 1529574475837598470, guid: 7f9ba7b4f24d9ed498b193bc0d25d8c5,
         type: 3}
       propertyPath: m_LocalRotation.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 2979060610081842733, guid: 7f9ba7b4f24d9ed498b193bc0d25d8c5,
+    - target: {fileID: 1529574475837598470, guid: 7f9ba7b4f24d9ed498b193bc0d25d8c5,
         type: 3}
       propertyPath: m_LocalRotation.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 2979060610081842733, guid: 7f9ba7b4f24d9ed498b193bc0d25d8c5,
+    - target: {fileID: 1529574475837598470, guid: 7f9ba7b4f24d9ed498b193bc0d25d8c5,
         type: 3}
       propertyPath: m_LocalRotation.w
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 2979060610081842733, guid: 7f9ba7b4f24d9ed498b193bc0d25d8c5,
+    - target: {fileID: 1529574475837598470, guid: 7f9ba7b4f24d9ed498b193bc0d25d8c5,
         type: 3}
       propertyPath: m_RootOrder
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 2979060610081842733, guid: 7f9ba7b4f24d9ed498b193bc0d25d8c5,
+    - target: {fileID: 1529574475837598470, guid: 7f9ba7b4f24d9ed498b193bc0d25d8c5,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 2979060610081842733, guid: 7f9ba7b4f24d9ed498b193bc0d25d8c5,
+    - target: {fileID: 1529574475837598470, guid: 7f9ba7b4f24d9ed498b193bc0d25d8c5,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 2979060610081842733, guid: 7f9ba7b4f24d9ed498b193bc0d25d8c5,
+    - target: {fileID: 1529574475837598470, guid: 7f9ba7b4f24d9ed498b193bc0d25d8c5,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
@@ -2905,7 +3433,7 @@ PrefabInstance:
     - target: {fileID: 3927173227628698497, guid: 26c872d483f52864d9eee672cad1a4d6,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 9.8
+      value: 33.6
       objectReference: {fileID: 0}
     - target: {fileID: 3927173227628698497, guid: 26c872d483f52864d9eee672cad1a4d6,
         type: 3}
