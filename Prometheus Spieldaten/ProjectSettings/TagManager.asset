@@ -9,6 +9,7 @@ TagManager:
   - AI
   - AI_SightRange
   - PowerUp
+  - Fire
   layers:
   - Default
   - TransparentFX

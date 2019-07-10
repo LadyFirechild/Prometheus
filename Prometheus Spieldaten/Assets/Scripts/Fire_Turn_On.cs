@@ -6,14 +6,16 @@ public class Fire_Turn_On : MonoBehaviour
 {
     public ParticleSystem particles;
 
-    private void Start()
+
+    void Start()
     {
-        particles = GetComponent<ParticleSystem>();
+        particles.gameObject.SetActive(false);
     }
 
-    private void OnTriggerEnter2D(Collider2D collision)
+
+    private void OnTriggerEnter2D(Collider2D other)
     {
-        if (collision.tag == "Player")
+        if (gameObject.tag == "Player")
         {
             particles.gameObject.SetActive(true);
             GlobalEvent.ActivatedFire?.Invoke(this.gameObject);
