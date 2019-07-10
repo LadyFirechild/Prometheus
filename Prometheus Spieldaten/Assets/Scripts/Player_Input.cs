@@ -20,6 +20,15 @@ namespace Prometheus
         public Player_Movement playerMovement;
         public bool jump;
 
+        private void OnEnable()
+        {
+            GlobalEvent.MovementAllowed += UnlockMovement;
+        }
+
+        private void OnDisable()
+        {
+            GlobalEvent.MovementAllowed -= UnlockMovement;
+        }
 
         public void FixedUpdate()
         {
@@ -60,6 +69,11 @@ namespace Prometheus
             }
 
 
+        }
+
+        void UnlockMovement(bool allowed)
+        {
+            enabled = allowed;
         }
     }
 }

@@ -18,7 +18,7 @@ public class Fire_Turn_On : MonoBehaviour
         Debug.Log("Hi");
         if (other.gameObject.tag == "Player")
         {
-            if (particles.gameObject.activeSelf == false)
+            if (!particles.gameObject.activeSelf)
             {
                 particles.gameObject.SetActive(true);
                 GlobalEvent.ActivatedFire?.Invoke(this.gameObject);
