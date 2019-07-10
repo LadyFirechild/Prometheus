@@ -81,7 +81,7 @@ namespace Prometheus
 
         public void OnTriggerEnter2D(Collider2D trigger)
         {
-            if (trigger.gameObject.layer == whatIsGround && gameObject.tag != "PowerUp")
+            if (trigger.gameObject.layer == whatIsGround && trigger.gameObject.tag != "PowerUp" && trigger.gameObject.tag != "Flame" && trigger.gameObject.tag != "Fire")
             {
                 grounded = true;
             }
@@ -89,7 +89,7 @@ namespace Prometheus
 
         public void OnTriggerStay2D(Collider2D trigger)
         {
-            if (gameObject.tag != "PowerUp")
+            if (trigger.gameObject.tag != "PowerUp" && trigger.gameObject.tag != "Fire" && trigger.gameObject.tag != "Flame")
             {
             grounded = true;
             }

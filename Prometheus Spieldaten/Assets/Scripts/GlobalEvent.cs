@@ -9,4 +9,6 @@ public class GlobalEvent
     /// </summary>
     public static System.Action<GameObject> ActivatedFire;
 
+    public static System.Action<bool> MovementAllowed;
+
 }

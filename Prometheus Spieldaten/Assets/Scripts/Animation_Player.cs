@@ -53,7 +53,7 @@ namespace Prometheus
 
             if (!playerInput.right && !playerInput.left)
             {
-                walkAnim.animation.Reset();
+                walkAnim.animation.Stop();
             }
 
             if (playerInput.left && playerInput.jump)
