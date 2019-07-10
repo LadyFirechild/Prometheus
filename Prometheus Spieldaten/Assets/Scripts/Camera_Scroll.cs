@@ -49,5 +49,6 @@ public class Camera_Scroll : MonoBehaviour
         nextPos.z = -CameraDist;
         myCam.transform.position = nextPos;
         GlobalEvent.MovementAllowed?.Invoke(true);
+        Debug.Log("Movement allowed");
     }
 }

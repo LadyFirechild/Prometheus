@@ -607,8 +607,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2d5c24ff89776004f8c44e96acef7ebb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  lightning: {fileID: 1016136060}
-  Player: {fileID: 0}
+  lightning: {fileID: 3049756771959916376, guid: 7f68f1553799c5e4d9469baba48b6979,
+    type: 3}
+  Player: {fileID: 782195396}
+  cam: {x: 0, y: 0, z: 0}
 --- !u!4 &446467362
 Transform:
   m_ObjectHideFlags: 0
@@ -1238,6 +1240,7 @@ MonoBehaviour:
   rigidbody: {fileID: 782195405}
   playerMovement: {fileID: 782195401}
   jump: 0
+  movementBlocked: 0
 --- !u!114 &782195404
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2045,7 +2048,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1016136060}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: -10.23, y: 20.86, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 446467362}

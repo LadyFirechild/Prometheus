@@ -20,6 +20,9 @@ namespace Prometheus
         public Player_Movement playerMovement;
         public bool jump;
 
+        [SerializeField] bool movementBlocked = false;
+        
+
         private void OnEnable()
         {
             GlobalEvent.MovementAllowed += UnlockMovement;
@@ -32,17 +35,19 @@ namespace Prometheus
 
         public void FixedUpdate()
         {
+            if (movementBlocked) return;
+
             right = Input.GetKey(right1) || Input.GetKey(right2);
             left = Input.GetKey(left1) || Input.GetKey(left2);
             if (right)
             {
-                SendMessage("MoveRight", SendMessageOptions.DontRequireReceiver);        
+                SendMessage("MoveRight", SendMessageOptions.DontRequireReceiver);
 
             }
             else if (left)
             {
                 SendMessage("MoveLeft", SendMessageOptions.DontRequireReceiver);
-                
+
             }
 
 
@@ -60,8 +65,8 @@ namespace Prometheus
         }
         public void Update()
         {
-            
-        jump = Input.GetKeyDown(jumpUp1) || Input.GetKeyDown(jumpUp2);
+
+            jump = Input.GetKeyDown(jumpUp1) || Input.GetKeyDown(jumpUp2);
 
             if (jump)
             {
@@ -71,9 +76,9 @@ namespace Prometheus
 
         }
 
-        void UnlockMovement(bool allowed)
+        public void UnlockMovement(bool allowed)
         {
-            enabled = allowed;
+            movementBlocked = !allowed;
         }
     }
 }

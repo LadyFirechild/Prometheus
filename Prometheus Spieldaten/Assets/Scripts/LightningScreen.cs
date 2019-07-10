@@ -6,10 +6,11 @@ public class LightningScreen : MonoBehaviour
 {
     public GameObject lightning;
     public GameObject Player;
+    public Vector3 cam;
 
     public void Update()
     {
-        if(Input.GetKeyDown(KeyCode.Space))
+        if (Input.GetKeyDown(KeyCode.Space))
         {
             PlaceLightning();
         }
@@ -17,16 +18,11 @@ public class LightningScreen : MonoBehaviour
 
     public void PlaceLightning()
     {
-        //Vector3 position = new Vector3(Random.Range(Mathf.Sqrt(Camera.main.orthographicSize) * -1 / 2, Mathf.Sqrt(Camera.main.orthographicSize) / 2), Random.Range(Mathf.Sqrt(Camera.main.orthographicSize) * -1 / 2, Mathf.Sqrt(Camera.main.orthographicSize) / 2));
+        float spawnY = Random.Range(Camera.main.ScreenToWorldPoint(new Vector2(0, 0)).y, Camera.main.ScreenToWorldPoint(new Vector2(0, Screen.height)).y);
+        float spawnX = Random.Range(Camera.main.ScreenToWorldPoint(new Vector2(0, 0)).x, Camera.main.ScreenToWorldPoint(new Vector2(Screen.width, 0)).x);
 
-        //Vector3 position = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-        Vector3 position;
-        position.x =0.95f;
-        position.y = 0.95f;
-        position.z = 0;
-        Camera.main.ViewportToWorldPoint(position);
-        position.z = 0;
-        Debug.Log(position +"<- DA!");
-        GameObject gO = Instantiate(lightning, position, Quaternion.identity, this.transform);
+        Vector2 spawnPosition = new Vector2(spawnX, spawnY);
+        Instantiate(lightning, spawnPosition, Quaternion.identity);
+
     }
 }
