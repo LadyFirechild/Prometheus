@@ -19,4 +19,8 @@ public class Fire_Turn_On : MonoBehaviour
             GlobalEvent.ActivatedFire?.Invoke(this.gameObject);
         }
     }
+<<<<<<< Updated upstream
 }
+=======
+}
+>>>>>>> Stashed changes
