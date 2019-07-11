@@ -40,12 +40,12 @@ namespace Prometheus
 
             right = Input.GetKey(right1) || Input.GetKey(right2);
             left = Input.GetKey(left1) || Input.GetKey(left2);
-            if (right && playerMovement.grounded)
+            if (right)
             {
                 SendMessage("MoveRight", SendMessageOptions.DontRequireReceiver);
 
             }
-            else if (left && playerMovement.grounded)
+            else if (left)
             {
                 SendMessage("MoveLeft", SendMessageOptions.DontRequireReceiver);
 
