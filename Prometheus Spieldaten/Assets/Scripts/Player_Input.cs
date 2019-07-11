@@ -69,7 +69,7 @@ namespace Prometheus
 
             jump = Input.GetKeyDown(jumpUp1) || Input.GetKeyDown(jumpUp2) || Input.GetKeyDown(jumpUp3) ;
 
-            if (jump)
+            if (jump && playerMovement.grounded)
             {
                 SendMessage("Jump", SendMessageOptions.DontRequireReceiver);
             }
