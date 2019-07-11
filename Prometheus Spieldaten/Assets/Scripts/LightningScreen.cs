@@ -9,7 +9,7 @@ public class LightningScreen : MonoBehaviour
 
     public void Update()
     {
-        if(fireCollected)
+        if (Input.GetKey(KeyCode.E))
         {
             PlaceLightning();
         }
@@ -17,15 +17,15 @@ public class LightningScreen : MonoBehaviour
 
     public void PlaceLightning()
     {
-        if (fireCollected)
+        //if (fireCollected)
         {
-        float horizontal = Random.Range(Camera.main.ScreenToWorldPoint(new Vector2(0, 0)).x, Camera.main.ScreenToWorldPoint(new Vector2(Screen.width, 0)).x);
-        float vertical = Random.Range(Camera.main.ScreenToWorldPoint(new Vector2(0, 0)).y, Camera.main.ScreenToWorldPoint(new Vector2(0, Screen.height)).y);
+            float horizontal = Random.Range(Camera.main.ScreenToWorldPoint(new Vector2(0, 0)).x, Camera.main.ScreenToWorldPoint(new Vector2(Screen.width, 0)).x);
+            float vertical = Random.Range(Camera.main.ScreenToWorldPoint(new Vector2(0, 0)).y, Camera.main.ScreenToWorldPoint(new Vector2(0, Screen.height)).y);
 
-        Vector2 randomSpawn = new Vector2(vertical, horizontal);
-        GameObject LightningClone = (Instantiate(lightning, randomSpawn, Quaternion.identity));
+            Vector2 randomSpawn = new Vector2(vertical, horizontal);
+            GameObject LightningClone = (Instantiate(lightning, randomSpawn, Quaternion.identity));
 
-        Destroy(LightningClone, 5f);
+            Destroy(LightningClone, 5f);
         }
 
     }
