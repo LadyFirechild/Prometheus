@@ -20,24 +20,25 @@ public class PauseMenu : MonoBehaviour
             if (GameIsPaused)
             {
                 Resume();                   //rufe die Funktion Resume auf
-            } else
+            }
+            else if (!GameIsPaused)
             {
                 Pause();                    //rufe die Funktion Pause auf
             }
         }
     }
 
-    void Resume ()
+    void Resume()
     {
         PauseMenuUI.SetActive(false);
         Time.timeScale = 1f;
         GameIsPaused = false;
     }
 
-    void Pause ()           
+    void Pause()
     {
-        PauseMenuUI.SetActive(true);            
+        PauseMenuUI.SetActive(true);
         Time.timeScale = 0f;                //setze die weiterlaufende Zeit auf 0
-        GameIsPaused = true;                
+        GameIsPaused = true;
     }
 }

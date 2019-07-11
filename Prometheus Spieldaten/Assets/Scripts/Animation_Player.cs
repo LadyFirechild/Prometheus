@@ -66,7 +66,7 @@ namespace Prometheus
                 walkAnim.transform.localScale = new Vector2(Mathf.Abs(walkAnim.transform.localScale.x) * 1, walkAnim.transform.localScale.y);
             }
 
-            if (playerInput.jump)
+            if (playerInput.jump && playerMovement.grounded)
             {
                 walkAnim.animation.Play("jumpAnim", 1);
             }

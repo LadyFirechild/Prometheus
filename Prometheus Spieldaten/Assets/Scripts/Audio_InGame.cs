@@ -13,6 +13,7 @@ namespace Prometheus
         public AudioSource walkSource;
         public float deltaSoundWalk;
         public float TimeBetweenSteps;
+        [SerializeField] bool movementBlocked = false;
 
         // Start is called before the first frame update
         void Start()
@@ -21,11 +22,22 @@ namespace Prometheus
             walkSource.clip = walkClip;
             deltaSoundWalk = TimeBetweenSteps;
         }
+        private void OnEnable()
+        {
+            GlobalEvent.MovementAllowed += UnlockMovement;
+        }
+
+        private void OnDisable()
+        {
+            GlobalEvent.MovementAllowed -= UnlockMovement;
+        }
 
         // Update is called once per frame
         void Update()
         {
-            if (Input.GetKeyDown(KeyCode.W) || Input.GetKeyDown(KeyCode.UpArrow))
+            if (movementBlocked) return;
+
+            if (Input.GetKeyDown(KeyCode.W) || Input.GetKeyDown(KeyCode.UpArrow) && playerMovement.grounded)
             {
                 jumpSource.Play();
             }
@@ -44,6 +56,11 @@ namespace Prometheus
                 walkSource.Stop();
                 deltaSoundWalk = 0;
             }
+        }
+
+        public void UnlockMovement(bool allowed)
+        {
+            movementBlocked = !allowed;
         }
     }
 }

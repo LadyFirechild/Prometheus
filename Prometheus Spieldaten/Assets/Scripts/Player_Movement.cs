@@ -62,15 +62,15 @@ namespace Prometheus
         {
             if (grounded == true)
             {
-                if(pUSize.normal)
+                if (pUSize.normal)
                 {
                     rigidbody.AddForce(new Vector2(0, jumpSpeed), ForceMode2D.Impulse);
                 }
-                if(pUSize.small)
+                if (pUSize.small)
                 {
                     rigidbody.AddForce(new Vector2(0, jumpSpeed * pUSize.SizeNormalSmall), ForceMode2D.Impulse);
                 }
-                if(pUSize.big)
+                if (pUSize.big)
                 {
                     rigidbody.AddForce(new Vector2(0, jumpSpeed * pUSize.SizeNormalBig), ForceMode2D.Impulse);
                 }
