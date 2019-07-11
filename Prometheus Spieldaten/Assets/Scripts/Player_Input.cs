@@ -14,6 +14,7 @@ namespace Prometheus
         public KeyCode left2 = KeyCode.LeftArrow;
         public KeyCode jumpUp1 = KeyCode.W;
         public KeyCode jumpUp2 = KeyCode.UpArrow;
+        public KeyCode jumpUp3 = KeyCode.Space;
         public bool right;
         public bool left;
         public new Rigidbody2D rigidbody;
@@ -66,7 +67,7 @@ namespace Prometheus
         public void Update()
         {
 
-            jump = Input.GetKeyDown(jumpUp1) || Input.GetKeyDown(jumpUp2);
+            jump = Input.GetKeyDown(jumpUp1) || Input.GetKeyDown(jumpUp2) || Input.GetKeyDown(jumpUp3) ;
 
             if (jump)
             {
