@@ -10,11 +10,14 @@ public class GoalScript : MonoBehaviour
     public GameObject Panel;
 
 
+
+
     void Update()
     {
         if(Input.GetKeyDown(KeyCode.F))
         {
             Panel.SetActive(false);
+           
         }
     }
 
@@ -22,11 +25,12 @@ public class GoalScript : MonoBehaviour
     {
         if(FireCounter.collectible == FireCounter.activeFires)
         {
-            SceneManager.LoadScene("");
+            SceneManager.LoadScene("Tutorial");
         }
         if(FireCounter.collectible != FireCounter.activeFires)
         {
             Panel.SetActive(true);
+          
         }
     }
 }
