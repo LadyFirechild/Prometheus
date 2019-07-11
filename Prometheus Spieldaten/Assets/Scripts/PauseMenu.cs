@@ -8,7 +8,7 @@ public class PauseMenu : MonoBehaviour
     //lege dieses Script in das entsprechende Canvas wo auch das Menü sich befindet, 
     //ziehe bei PauseMenuUI das Menü/Panel hinein
 
-    public static bool GameIsPaused = false;    //setze den Wert ob das Spiel pausiert auf falsch
+    public bool GameIsPaused = false;    //setze den Wert ob das Spiel pausiert auf falsch
 
     public GameObject PauseMenuUI;              //erstelle ein öffentliches Game-Object mit dem Namen Pause
 

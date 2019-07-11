@@ -8,10 +8,7 @@ public class LightningScreen : MonoBehaviour
 
     public void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Space))
-        {
             PlaceLightning();
-        }
     }
 
     public void PlaceLightning()

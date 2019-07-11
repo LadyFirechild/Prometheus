@@ -5,7 +5,7 @@ using UnityEngine;
 public class Player_Stable : MonoBehaviour
 {
 
-    public Rigidbody2D rigidbody;
+    public new Rigidbody2D rigidbody;
     void Update()
     {
         //  transform.position = new Vector2(transform.position.x, transform.position.y);

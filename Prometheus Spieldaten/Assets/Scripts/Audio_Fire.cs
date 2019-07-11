@@ -6,6 +6,7 @@ public class Audio_Fire : MonoBehaviour
 {
     public AudioClip FireClip;
     public AudioSource FireSource;
+    public PauseMenu pauseMenu;
 
     // Update is called once per frame
     void Start()
@@ -14,7 +15,18 @@ public class Audio_Fire : MonoBehaviour
     }
     void Update()
     {
-        FireSource.Play();
-        Debug.Log("Audio playing");
+        if (!FireSource.isPlaying && !pauseMenu.GameIsPaused)
+        {
+            FireSource.Play();
+            Debug.Log("Audio playing");
+        }
+        if (pauseMenu.GameIsPaused)
+        {
+            FireSource.Pause();
+        }
+        if(!pauseMenu.GameIsPaused)
+        {
+            FireSource.UnPause();
+        }
     }
 }
