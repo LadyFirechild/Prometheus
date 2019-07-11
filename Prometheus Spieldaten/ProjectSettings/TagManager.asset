@@ -11,6 +11,9 @@ TagManager:
   - PowerUp
   - Fire
   - Flame
+  - SmallPU
+  - NormalPU
+  - BigPU
   layers:
   - Default
   - TransparentFX
