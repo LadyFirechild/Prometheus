@@ -14,6 +14,18 @@ public class BeendenScript : MonoBehaviour
             bool isActice = Panel.activeSelf;
 
             Panel.SetActive(!isActice);
+          
         }
     }
+
+   /* public void OpenPanels()
+    {
+        if (Panel != null)
+        {
+            bool isActice = Panel.activeSelf;
+
+            Panel.SetActive(!isActice);
+            Time.timeScale = 1f;
+        }
+    } */
 }
