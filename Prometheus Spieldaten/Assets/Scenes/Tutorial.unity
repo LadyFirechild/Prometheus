@@ -11726,6 +11726,7 @@ MonoBehaviour:
   rushClip: {fileID: 8300000, guid: 744011ca72055ea48b7cd4b7c3b4f102, type: 3}
   rushSource: {fileID: 1922939544}
   pauseMenu: {fileID: 1017968870}
+  bigChalice: 0
 --- !u!4 &1922939543
 Transform:
   m_ObjectHideFlags: 0
