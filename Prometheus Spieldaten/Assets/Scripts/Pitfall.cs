@@ -15,4 +15,6 @@ public class Pitfall : MonoBehaviour
             Destroy(coll.gameObject);
         }
     }
+
+
 }
