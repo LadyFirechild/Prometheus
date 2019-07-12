@@ -10,7 +10,7 @@ public class Audio_Background : MonoBehaviour
     public AudioClip rushClip;
     public AudioSource rushSource;
     public PauseMenu pauseMenu;
-    public bool bigChalice = false;
+    public ChaliceCheck chaliceCheck;
 
     void Start()
     {
@@ -19,7 +19,7 @@ public class Audio_Background : MonoBehaviour
 
     void Update()
     {
-        if (!bigChalice)
+        if (!chaliceCheck.bigChalice)
         {
 
             if (!calmSource.isPlaying && !pauseMenu.GameIsPaused)
@@ -35,11 +35,12 @@ public class Audio_Background : MonoBehaviour
                 calmSource.UnPause();
             }
         }
-        if (bigChalice)
+        else if (chaliceCheck.bigChalice)
         {
+            calmSource.Stop();
+
             if (!rushSource.isPlaying && !pauseMenu.GameIsPaused)
             {
-                calmSource.Stop();
                 rushSource.Play();
             }
             if (pauseMenu.GameIsPaused)
