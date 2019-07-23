@@ -12,6 +12,8 @@ public class Fire_Counter : MonoBehaviour
 
     public Text Feuer;      //stellt Text.UI zur Verfügung
 
+    
+
 
     void Start()
     {
@@ -42,6 +44,8 @@ public class Fire_Counter : MonoBehaviour
     void Update()
 
     {
+        // to do: starten sobald am ersten Feuer
+        //to do: Layer hinter Zahlen, wegen Sichtbarkeit
         Feuer.text = activeFires + " / " + collectible;     //zeigt in der Text.UI die Feuer an
 
         // es folgt noch die Aktualisierung des Bildes
