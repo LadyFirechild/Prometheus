@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Fire_Counter : MonoBehaviour
 {
@@ -8,6 +9,9 @@ public class Fire_Counter : MonoBehaviour
     public int collectible = 0;
 
     public int activeFires;
+
+    public Text Feuer;      //stellt Text.UI zur Verfügung
+
 
     void Start()
     {
@@ -33,5 +37,15 @@ public class Fire_Counter : MonoBehaviour
         activeFires++;
         Debug.Log(activ.name + " " + activ.transform.position);
 
+    }
+
+    void Update()
+
+    {
+        Feuer.text = activeFires + " / " + collectible;     //zeigt in der Text.UI die Feuer an
+
+        // es folgt noch die Aktualisierung des Bildes
+        // Bild 1 Feuer fehlen noch
+        // Bild 2 alle Feuer zusammen
     }
 }

@@ -142,6 +142,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   FireClip: {fileID: 8300000, guid: 7e93302caf08a834eb219137ed0c7a3e, type: 3}
   FireSource: {fileID: 0}
+  pauseMenu: {fileID: 0}
 --- !u!1 &3882440617676175207
 GameObject:
   m_ObjectHideFlags: 0
