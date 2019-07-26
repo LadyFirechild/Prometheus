@@ -12727,7 +12727,7 @@ MonoBehaviour:
   calmSource: {fileID: 1922939541}
   rushClip: {fileID: 8300000, guid: 744011ca72055ea48b7cd4b7c3b4f102, type: 3}
   rushSource: {fileID: 1922939544}
-  pauseMenu: {fileID: 0}
+  pauseMenu: {fileID: 1680537171}
   chaliceCheck: {fileID: 899383471}
 --- !u!4 &1922939543
 Transform:
