@@ -12,13 +12,22 @@ public class LightningScreen : MonoBehaviour
 
     public void Update()
     {
-        timeElapsed += Time.deltaTime;
-        if (timeElapsed >= Interval && chaliceCheck.bigChalice)
+        if (chaliceCheck.bigChalice)
         {
-            PlaceLightning();
-            PlaceLightning();
-            timeElapsed -= Interval;
+
+            timeElapsed += Time.deltaTime;
+            if (timeElapsed >= Interval)
+            {
+                PlaceLightning();
+                PlaceLightning();
+                PlaceLightning();
+                PlaceLightning();
+                PlaceLightning();
+                PlaceLightning();
+                timeElapsed -= Interval;
+            }
         }
+
 
 
     }
@@ -27,7 +36,7 @@ public class LightningScreen : MonoBehaviour
     {
         {
             float horizontal = Random.Range(Camera.main.ScreenToWorldPoint(new Vector2(0, 0)).x, Camera.main.ScreenToWorldPoint(new Vector2(Screen.width, 0)).x);
-            float vertical = Random.Range(Camera.main.ScreenToWorldPoint(new Vector2(0, 0)).y, Camera.main.ScreenToWorldPoint(new Vector2(0, Screen.height)).y);
+            float vertical = Random.Range(Camera.main.ScreenToWorldPoint(new Vector2(0, Screen.height/2)).y, Camera.main.ScreenToWorldPoint(new Vector2(0, Screen.height)).y);
 
             Vector2 randomSpawn = new Vector2(horizontal, vertical);
             GameObject LightningClone = (Instantiate(lightning, randomSpawn, Quaternion.identity));
