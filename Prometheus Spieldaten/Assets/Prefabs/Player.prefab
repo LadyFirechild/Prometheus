@@ -1348,6 +1348,7 @@ MonoBehaviour:
   velocity: {x: 0, y: 0}
   Idle: 0
   AirBorne: 0
+  Push: 0
 --- !u!50 &4607022864592892109
 Rigidbody2D:
   serializedVersion: 4
@@ -1689,8 +1690,8 @@ CapsuleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -2.0135226, y: 5.5291967}
-  m_Size: {x: 9.876076, y: 20.736732}
+  m_Offset: {x: -2.2472062, y: 5.5291967}
+  m_Size: {x: 5.981356, y: 20.736732}
   m_Direction: 0
 --- !u!61 &4607022864592892108
 BoxCollider2D:

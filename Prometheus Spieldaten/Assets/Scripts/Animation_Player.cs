@@ -14,6 +14,7 @@ namespace Prometheus
         public Vector2 velocity;
         public bool Idle;
         public bool AirBorne;
+        public bool Push;
 
 
         public void Awake()
@@ -43,7 +44,6 @@ namespace Prometheus
                     walkAnim.animation.Stop("idleAnim");
                     walkAnim.animation.Play("walkAnim");
                 }
-
             }
 
             if (playerInput.left)
@@ -55,7 +55,6 @@ namespace Prometheus
                     walkAnim.animation.Stop("idleAnim");
                     walkAnim.animation.Play("walkAnim");
                 }
-
             }
 
             if (!playerInput.right && !playerInput.left && !playerInput.jump)
@@ -82,7 +81,6 @@ namespace Prometheus
 
             if ((velocity.y > 0 || velocity.y == 0))
             {
-
                 if (playerInput.jump && playerMovement.grounded)
                 {
                     walkAnim.animation.Play("jumpAnim", 1);
@@ -116,17 +114,33 @@ namespace Prometheus
             {
                 walkAnim.animation.Stop("fallAnim");
             }
+
+            if (Push == true)
+            {
+                walkAnim.animation.Stop("walkAnim");
+                walkAnim.animation.Stop("jumpAnim");
+                walkAnim.animation.Stop("fallAnim");
+                if (!walkAnim.animation.isPlaying)
+                {
+                    walkAnim.animation.Play("pushAnim");
+                }
+            }
+
+            if (Push == false)
+            {
+                walkAnim.animation.Stop("pushAnim");
+            }
         }
 
         public void OnCollisionEnter2D(Collision2D coll)
         {
             if (coll.gameObject.tag == "Moveable" && (playerInput.left || playerInput.right))
             {
-                walkAnim.animation.Play("pushAnim");
+                Push = true;
             }
             else
             {
-                walkAnim.animation.Stop("pushAnim");
+                Push = false;
             }
 
         }
@@ -135,11 +149,11 @@ namespace Prometheus
 
             if (coll.gameObject.tag == "Moveable" && (playerInput.left || playerInput.right))
             {
-                walkAnim.animation.Play("pushAnim");
+                Push = true;
             }
             else
             {
-                walkAnim.animation.Stop("pushAnim");
+                Push = false;
             }
         }
 
@@ -147,9 +161,8 @@ namespace Prometheus
         {
             if (coll.gameObject.tag == "Moveable")
             {
-                walkAnim.animation.Stop("pushAnim");
+                Push = false;
             }
         }
     }
 }
-
