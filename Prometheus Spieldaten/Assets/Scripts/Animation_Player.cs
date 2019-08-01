@@ -6,11 +6,14 @@ using DragonBones;
 namespace Prometheus
 {
     public class Animation_Player : MonoBehaviour
-    { 
+    {
 
         public Player_Movement playerMovement;
         public Player_Input playerInput;
         [SerializeField] UnityArmatureComponent walkAnim;
+        public Vector2 velocity;
+        public bool Idle;
+        public bool AirBorne;
 
 
         public void Awake()
@@ -22,19 +25,22 @@ namespace Prometheus
         {
             walkAnim.animation.Stop("walkAnim");
             walkAnim.animation.Stop("jumpAnim");
-            walkAnim.animation.Stop("holdAnim");
+            walkAnim.animation.Stop("fallAnim");
             walkAnim.animation.Stop("pushAnim");
+            walkAnim.animation.Stop("idleAnim");
         }
 
         public void Update()
         {
+            velocity = playerInput.rigidbody.velocity;
 
             if (playerInput.right)
             {
                 walkAnim.transform.localScale = new Vector2(Mathf.Abs(walkAnim.transform.localScale.x) * 1, walkAnim.transform.localScale.y);
-                if (!walkAnim.animation.isPlaying && playerMovement.grounded && playerInput.right)
+                if (!walkAnim.animation.isPlaying && playerMovement.grounded && playerInput.right && Idle == false)
                 {
                     walkAnim.animation.Stop("jumpAnim");
+                    walkAnim.animation.Stop("idleAnim");
                     walkAnim.animation.Play("walkAnim");
                 }
 
@@ -43,17 +49,25 @@ namespace Prometheus
             if (playerInput.left)
             {
                 walkAnim.transform.localScale = new Vector2(Mathf.Abs(walkAnim.transform.localScale.x) * -1, walkAnim.transform.localScale.y);
-                if (!walkAnim.animation.isPlaying && playerMovement.grounded && playerInput.left)
+                if (!walkAnim.animation.isPlaying && playerMovement.grounded && playerInput.left && Idle == false)
                 {
                     walkAnim.animation.Stop("jumpAnim");
+                    walkAnim.animation.Stop("idleAnim");
                     walkAnim.animation.Play("walkAnim");
                 }
 
             }
 
-            if (!playerInput.right && !playerInput.left)
+            if (!playerInput.right && !playerInput.left && !playerInput.jump)
             {
-                walkAnim.animation.Stop();
+                Idle = true;
+                walkAnim.animation.Stop("walkAnim");
+                Debug.Log("Idle on");
+            }
+            else if (playerInput.right || playerInput.left || playerInput.jump)
+            {
+                Idle = false;
+                Debug.Log("Idle off");
             }
 
             if (playerInput.left && playerInput.jump)
@@ -66,36 +80,66 @@ namespace Prometheus
                 walkAnim.transform.localScale = new Vector2(Mathf.Abs(walkAnim.transform.localScale.x) * 1, walkAnim.transform.localScale.y);
             }
 
-            if (playerInput.jump && playerMovement.grounded)
+            if ((velocity.y > 0 || velocity.y == 0))
             {
-                walkAnim.animation.Play("jumpAnim", 1);
+
+                if (playerInput.jump && playerMovement.grounded)
+                {
+                    walkAnim.animation.Play("jumpAnim", 1);
+                    AirBorne = true;
+                }
+            }
+
+            if (velocity.y < 0 && AirBorne == true)
+            {
+                walkAnim.animation.Stop("jumpAnim");
+                walkAnim.animation.Play("fallAnim", 1);
+                AirBorne = false;
             }
 
 
+
+            if (Idle == true)
+            {
+                if (!walkAnim.animation.isPlaying)
+                {
+                    walkAnim.animation.Play("idleAnim");
+                }
+            }
+
+            if (Idle == false)
+            {
+                walkAnim.animation.Stop("idleAnim");
+            }
+
+            if (playerMovement.grounded)
+            {
+                walkAnim.animation.Stop("fallAnim");
+            }
         }
 
         public void OnCollisionEnter2D(Collision2D coll)
         {
-            if (coll.gameObject.tag == "Moveable" && !(playerInput.left || playerInput.right))
-            {
-                walkAnim.animation.Play("holdAnim", 1);
-            }
-
             if (coll.gameObject.tag == "Moveable" && (playerInput.left || playerInput.right))
             {
-                walkAnim.animation.Play("pushAnim", 1);
+                walkAnim.animation.Play("pushAnim");
+            }
+            else
+            {
+                walkAnim.animation.Stop("pushAnim");
             }
 
         }
         public void OnCollisionStay2D(Collision2D coll)
         {
-            if (coll.gameObject.tag == "Moveable" && !(playerInput.left || playerInput.right))
-            {
-                walkAnim.animation.Play("holdAnim", 1);
-            }
+
             if (coll.gameObject.tag == "Moveable" && (playerInput.left || playerInput.right))
             {
-                walkAnim.animation.Play("pushAnim", 1);
+                walkAnim.animation.Play("pushAnim");
+            }
+            else
+            {
+                walkAnim.animation.Stop("pushAnim");
             }
         }
 
@@ -103,7 +147,6 @@ namespace Prometheus
         {
             if (coll.gameObject.tag == "Moveable")
             {
-                walkAnim.animation.Stop("holdAnim");
                 walkAnim.animation.Stop("pushAnim");
             }
         }

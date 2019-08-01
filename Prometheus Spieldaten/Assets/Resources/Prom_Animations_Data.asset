@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 84ec2694dc0ba6e499234b4c922571fc, type: 3}
+  m_Name: Prom_Animations_Data
+  m_EditorClassIdentifier: 
+  dataName: Prom_Animations
+  dragonBonesJSON: {fileID: 4900000, guid: 45212290f7eaef04abd87f3ce4ee0e82, type: 3}
+  textureAtlas:
+  - textureAtlasJSON: {fileID: 4900000, guid: 19795d3d6982e1141a96b55198b1c76b, type: 3}
+    texture: {fileID: 2800000, guid: 7523ebc33c6f6f14aa6aace6b1f88b3b, type: 3}
+    material: {fileID: 2100000, guid: 57c90a0fb256ab041b03e19476fe62e4, type: 2}
+    uiMaterial: {fileID: 0}

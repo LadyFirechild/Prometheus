@@ -140,8 +140,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b26c35d2c69e3d941a2826e917bd955f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  FireClip: {fileID: 8300000, guid: 7e93302caf08a834eb219137ed0c7a3e, type: 3}
-  FireSource: {fileID: 0}
+  FireClip: {fileID: 8300000, guid: 809836dafc9452e45ac783a007035dc3, type: 3}
+  FireSource: {fileID: 2284310580375167029}
   pauseMenu: {fileID: 0}
 --- !u!1 &3882440617676175207
 GameObject:

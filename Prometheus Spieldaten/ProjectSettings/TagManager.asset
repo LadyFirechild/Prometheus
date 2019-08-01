@@ -15,6 +15,7 @@ TagManager:
   - NormalPU
   - BigPU
   - BigChalice
+  - Moveable
   layers:
   - Default
   - TransparentFX
