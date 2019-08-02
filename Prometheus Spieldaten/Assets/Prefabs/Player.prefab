@@ -1382,7 +1382,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a183ad1d4a0612a448e7a53ddd9d15fb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fallMultiplier: 2.5
+  fallMultiplier: 2
   exponent: 1
 --- !u!114 &4607022864592892105
 MonoBehaviour:
@@ -1437,7 +1437,7 @@ MonoBehaviour:
   jumpSpeed: 40
   rigidbody: {fileID: 0}
   grounded: 0
-  maxSpeed: 30
+  maxSpeed: 35
   whatIsGround:
     serializedVersion: 2
     m_Bits: 256

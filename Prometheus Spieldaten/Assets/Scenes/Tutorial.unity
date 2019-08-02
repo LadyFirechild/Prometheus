@@ -9590,21 +9590,6 @@ PrefabInstance:
       propertyPath: m_RootOrder
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 4607022864592892115, guid: 8f6da66d399787241b87f99d569b1d59,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4607022864592892115, guid: 8f6da66d399787241b87f99d569b1d59,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4607022864592892115, guid: 8f6da66d399787241b87f99d569b1d59,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 4607022863228229703, guid: 8f6da66d399787241b87f99d569b1d59,
         type: 3}
       propertyPath: m_Materials.Array.data[0]
