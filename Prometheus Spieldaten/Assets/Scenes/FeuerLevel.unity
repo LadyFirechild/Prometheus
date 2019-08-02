@@ -1373,6 +1373,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 8982038315973679240, guid: a3cf615568fdc9f44b310fdf2ded68d5,
+        type: 3}
+      propertyPath: m_Name
+      value: Big-Fire
+      objectReference: {fileID: 0}
     - target: {fileID: 8982038314663334005, guid: a3cf615568fdc9f44b310fdf2ded68d5,
         type: 3}
       propertyPath: m_IsActive
@@ -1381,27 +1386,32 @@ PrefabInstance:
     - target: {fileID: 8982038315164439137, guid: a3cf615568fdc9f44b310fdf2ded68d5,
         type: 3}
       propertyPath: m_LocalScale.x
-      value: 16.696978
+      value: 18.91082
       objectReference: {fileID: 0}
     - target: {fileID: 8982038315164439137, guid: a3cf615568fdc9f44b310fdf2ded68d5,
         type: 3}
       propertyPath: m_LocalScale.z
-      value: 22.068487
+      value: 21.068724
+      objectReference: {fileID: 0}
+    - target: {fileID: 8982038315164439137, guid: a3cf615568fdc9f44b310fdf2ded68d5,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 6.4186788
       objectReference: {fileID: 0}
     - target: {fileID: 8982038315692268435, guid: a3cf615568fdc9f44b310fdf2ded68d5,
         type: 3}
       propertyPath: m_LocalScale.x
-      value: 9.011929
+      value: 19.391258
       objectReference: {fileID: 0}
     - target: {fileID: 8982038315692268435, guid: a3cf615568fdc9f44b310fdf2ded68d5,
         type: 3}
       propertyPath: m_LocalScale.z
-      value: 16.033749
+      value: 17.379736
       objectReference: {fileID: 0}
-    - target: {fileID: 8982038315973679240, guid: a3cf615568fdc9f44b310fdf2ded68d5,
+    - target: {fileID: 8982038315692268435, guid: a3cf615568fdc9f44b310fdf2ded68d5,
         type: 3}
-      propertyPath: m_Name
-      value: Big-Fire
+      propertyPath: m_LocalScale.y
+      value: 6.4186788
       objectReference: {fileID: 0}
     - target: {fileID: 8982038315973679246, guid: a3cf615568fdc9f44b310fdf2ded68d5,
         type: 3}
@@ -1462,6 +1472,21 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8982038315973679247, guid: a3cf615568fdc9f44b310fdf2ded68d5,
+        type: 3}
+      propertyPath: m_LocalScale.z
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8982038315973679247, guid: a3cf615568fdc9f44b310fdf2ded68d5,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8982038315973679247, guid: a3cf615568fdc9f44b310fdf2ded68d5,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a3cf615568fdc9f44b310fdf2ded68d5, type: 3}
@@ -2515,6 +2540,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: "Feuerschale-auf-S\xE4ule"
+      objectReference: {fileID: 0}
+    - target: {fileID: 7337232074560184457, guid: 7f9ba7b4f24d9ed498b193bc0d25d8c5,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1529574475837598470, guid: 7f9ba7b4f24d9ed498b193bc0d25d8c5,
         type: 3}
