@@ -9620,7 +9620,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8910966242294231007}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.06, y: 2.91, z: 4.71}
+  m_LocalPosition: {x: -0.06, y: 2.91, z: 0}
   m_LocalScale: {x: 2.445348, y: 2.445348, z: 2.445348}
   m_Children: []
   m_Father: {fileID: 8910966242884097620}
@@ -19251,7 +19251,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8910966242884097620}
   m_Layer: 0
-  m_Name: PowerUp
+  m_Name: "X-PowerUpGro\xDF"
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
