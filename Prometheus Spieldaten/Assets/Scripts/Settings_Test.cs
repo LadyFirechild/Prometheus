@@ -52,5 +52,4 @@ public class Settings_Test : MonoBehaviour
     {
         Screen.fullScreen = isFullscreen;
     }
-
 }
