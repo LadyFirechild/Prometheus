@@ -7,19 +7,33 @@ namespace Prometheus
     public class Audio_InGame : MonoBehaviour
     {
         public Player_Movement playerMovement;
+        public Player_Input playerInput;
         public AudioClip jumpClip;
         public AudioSource jumpSource;
-        public AudioClip walkClip;
-        public AudioSource walkSource;
+        public AudioClip[] walkClipArray;
+        public AudioSource[] allWalkSources;
         public float deltaSoundWalk;
         public float TimeBetweenSteps;
         [SerializeField] bool movementBlocked = false;
 
-        // Start is called before the first frame update
+        void Awake()
+        {
+            allWalkSources = GetComponents<AudioSource>();
+            allWalkSources[0].clip = walkClipArray[0];
+            allWalkSources[1].clip = walkClipArray[1];
+            allWalkSources[2].clip = walkClipArray[2];
+            allWalkSources[3].clip = walkClipArray[3];
+            allWalkSources[4].clip = walkClipArray[4];
+            allWalkSources[5].clip = walkClipArray[5];
+            allWalkSources[6].clip = walkClipArray[6];
+            allWalkSources[7].clip = walkClipArray[7];
+            allWalkSources[8].clip = walkClipArray[8];
+            allWalkSources[9].clip = walkClipArray[9];
+        }
         void Start()
         {
+
             jumpSource.clip = jumpClip;
-            walkSource.clip = walkClip;
             deltaSoundWalk = TimeBetweenSteps;
         }
         private void OnEnable()
@@ -37,23 +51,24 @@ namespace Prometheus
         {
             if (movementBlocked) return;
 
-            if (Input.GetKeyDown(KeyCode.W) || Input.GetKeyDown(KeyCode.UpArrow) && playerMovement.grounded)
+            if (playerInput.jump && playerMovement.grounded)
             {
                 jumpSource.Play();
             }
-            if (playerMovement.grounded && ((Input.GetKey(KeyCode.D) || Input.GetKey(KeyCode.RightArrow) || (Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.LeftArrow)))))
+
+            if (playerMovement.grounded && (playerInput.right || playerInput.left))
             {
 
                 deltaSoundWalk += Time.deltaTime;
                 if (deltaSoundWalk >= TimeBetweenSteps)
                 {
-                    walkSource.Play();
+                    allWalkSources[Random.Range(0,walkClipArray.Length)].Play();
                     deltaSoundWalk -= TimeBetweenSteps;
                 }
             }
             if (!playerMovement.grounded)
             {
-                walkSource.Stop();
+                allWalkSources[Random.Range(0, walkClipArray.Length)].Stop();
                 deltaSoundWalk = 0;
             }
         }

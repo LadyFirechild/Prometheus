@@ -914,112 +914,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 382968163}
   m_CullTransparentMesh: 0
---- !u!1001 &441069465
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 6889501714692682445, guid: 31eea8c30f34ebc479cd96d28afca2c5,
-        type: 3}
-      propertyPath: m_Name
-      value: big_pU
-      objectReference: {fileID: 0}
-    - target: {fileID: 6889501714692682448, guid: 31eea8c30f34ebc479cd96d28afca2c5,
-        type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -1.1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6889501714692682448, guid: 31eea8c30f34ebc479cd96d28afca2c5,
-        type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 2.8
-      objectReference: {fileID: 0}
-    - target: {fileID: 6889501714692682448, guid: 31eea8c30f34ebc479cd96d28afca2c5,
-        type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 7.1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6889501714692682448, guid: 31eea8c30f34ebc479cd96d28afca2c5,
-        type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6889501714692682448, guid: 31eea8c30f34ebc479cd96d28afca2c5,
-        type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6889501714692682448, guid: 31eea8c30f34ebc479cd96d28afca2c5,
-        type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6889501714692682448, guid: 31eea8c30f34ebc479cd96d28afca2c5,
-        type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6889501714692682448, guid: 31eea8c30f34ebc479cd96d28afca2c5,
-        type: 3}
-      propertyPath: m_RootOrder
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 6889501714692682448, guid: 31eea8c30f34ebc479cd96d28afca2c5,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6889501714692682448, guid: 31eea8c30f34ebc479cd96d28afca2c5,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6889501714692682448, guid: 31eea8c30f34ebc479cd96d28afca2c5,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6889501714692682447, guid: 31eea8c30f34ebc479cd96d28afca2c5,
-        type: 3}
-      propertyPath: m_Sprite
-      value: 
-      objectReference: {fileID: 21300000, guid: 5a1ea3d29cf18204ea62725de3352af5,
-        type: 3}
-    - target: {fileID: 6889501714692682447, guid: 31eea8c30f34ebc479cd96d28afca2c5,
-        type: 3}
-      propertyPath: m_Size.x
-      value: 2.06
-      objectReference: {fileID: 0}
-    - target: {fileID: 6889501714692682447, guid: 31eea8c30f34ebc479cd96d28afca2c5,
-        type: 3}
-      propertyPath: m_Size.y
-      value: 2.55
-      objectReference: {fileID: 0}
-    - target: {fileID: 6889501714692682447, guid: 31eea8c30f34ebc479cd96d28afca2c5,
-        type: 3}
-      propertyPath: m_WasSpriteAssigned
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6889501714692682447, guid: 31eea8c30f34ebc479cd96d28afca2c5,
-        type: 3}
-      propertyPath: m_SortingLayerID
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6889501714692682447, guid: 31eea8c30f34ebc479cd96d28afca2c5,
-        type: 3}
-      propertyPath: m_SortingLayer
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6889501714692682447, guid: 31eea8c30f34ebc479cd96d28afca2c5,
-        type: 3}
-      propertyPath: m_DrawMode
-      value: 0
-      objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: 6889501714692682447, guid: 31eea8c30f34ebc479cd96d28afca2c5, type: 3}
-  m_SourcePrefab: {fileID: 100100000, guid: 31eea8c30f34ebc479cd96d28afca2c5, type: 3}
 --- !u!1 &506589090
 GameObject:
   m_ObjectHideFlags: 0
@@ -1270,7 +1164,7 @@ Camera:
   m_Enabled: 1
   serializedVersion: 2
   m_ClearFlags: 1
-  m_BackGroundColor: {r: 0.19215687, g: 0.3019608, b: 0.4745098, a: 0}
+  m_BackGroundColor: {r: 0, g: 0, b: 0, a: 0}
   m_projectionMatrixMode: 1
   m_GateFitMode: 2
   m_FOVAxisMode: 0

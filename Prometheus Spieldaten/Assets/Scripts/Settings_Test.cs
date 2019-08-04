@@ -8,7 +8,7 @@ public class Settings_Test : MonoBehaviour
 {
     [SerializeField] AudioMixer audioMixer;
     [SerializeField] Dropdown dropdownResolution;
-    Resolution[] resolution;
+    Resolution[] resolution; 
 
     public void Start()
     {

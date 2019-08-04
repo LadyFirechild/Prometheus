@@ -1293,6 +1293,7 @@ GameObject:
   - component: {fileID: 4607022864592892100}
   - component: {fileID: 4607022864592892102}
   - component: {fileID: 4607022864592892110}
+  - component: {fileID: 8134337523978321829}
   - component: {fileID: 4607022864592892108}
   m_Layer: 0
   m_Name: Player
@@ -1478,10 +1479,21 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerMovement: {fileID: 4607022864592892111}
+  playerInput: {fileID: 4607022864592892105}
   jumpClip: {fileID: 8300000, guid: 26150653e55e37448abc92fb648444df, type: 3}
   jumpSource: {fileID: 4607022864592892102}
-  walkClip: {fileID: 8300000, guid: 9def05015b9561f4ebe38a9b95571c84, type: 3}
-  walkSource: {fileID: 4607022864592892100}
+  walkClipArray:
+  - {fileID: 8300000, guid: 9def05015b9561f4ebe38a9b95571c84, type: 3}
+  - {fileID: 8300000, guid: f84bbe1f6ac16854088f9fc96bdbf23e, type: 3}
+  - {fileID: 8300000, guid: d0f54a8bf1034f747af9b7d049a44a32, type: 3}
+  - {fileID: 8300000, guid: 90c9b4c51aa673f45bcdf943765c1d61, type: 3}
+  - {fileID: 8300000, guid: fedf04a0446051f4d8e53da98a2f7749, type: 3}
+  - {fileID: 8300000, guid: dfe43d2319d58874e906dfe7eaf7d244, type: 3}
+  - {fileID: 8300000, guid: ecee748c82fbadb4091e670661d79dca, type: 3}
+  - {fileID: 8300000, guid: d322f5e85e1d33c4ab8967e3397a3716, type: 3}
+  - {fileID: 8300000, guid: 96f0c7b5c3e92eb49992b4b9d7ccb915, type: 3}
+  - {fileID: 8300000, guid: 15a245396851015428798507256d8a06, type: 3}
+  walkSource: {fileID: 0}
   deltaSoundWalk: 0
   TimeBetweenSteps: 0.4
   movementBlocked: 0
@@ -1693,6 +1705,18 @@ CapsuleCollider2D:
   m_Offset: {x: -2.2472062, y: 5.5291967}
   m_Size: {x: 5.981356, y: 20.736732}
   m_Direction: 0
+--- !u!114 &8134337523978321829
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4607022864592892113}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0964157a6dd08f04faaaf433d01bc884, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!61 &4607022864592892108
 BoxCollider2D:
   m_ObjectHideFlags: 0
