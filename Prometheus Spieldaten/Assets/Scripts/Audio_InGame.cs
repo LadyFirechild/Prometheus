@@ -8,8 +8,7 @@ namespace Prometheus
     {
         public Player_Movement playerMovement;
         public Player_Input playerInput;
-        public AudioClip jumpClip;
-        public AudioSource jumpSource;
+        public AudioClip[] jumpClips;
         public AudioClip[] walkClipArray;
         public AudioSource[] allWalkSources;
         public float deltaSoundWalk;
@@ -29,11 +28,11 @@ namespace Prometheus
             allWalkSources[7].clip = walkClipArray[7];
             allWalkSources[8].clip = walkClipArray[8];
             allWalkSources[9].clip = walkClipArray[9];
+            allWalkSources[10].clip = jumpClips[0];
+            allWalkSources[11].clip = jumpClips[1];
         }
         void Start()
         {
-
-            jumpSource.clip = jumpClip;
             deltaSoundWalk = TimeBetweenSteps;
         }
         private void OnEnable()
@@ -53,7 +52,7 @@ namespace Prometheus
 
             if (playerInput.jump && playerMovement.grounded)
             {
-                jumpSource.Play();
+                allWalkSources[Random.Range(walkClipArray.Length, walkClipArray.Length + jumpClips.Length)].Play();
             }
 
             if (playerMovement.grounded && (playerInput.right || playerInput.left))
@@ -62,7 +61,7 @@ namespace Prometheus
                 deltaSoundWalk += Time.deltaTime;
                 if (deltaSoundWalk >= TimeBetweenSteps)
                 {
-                    allWalkSources[Random.Range(0,walkClipArray.Length)].Play();
+                    allWalkSources[Random.Range(0, walkClipArray.Length)].Play();
                     deltaSoundWalk -= TimeBetweenSteps;
                 }
             }

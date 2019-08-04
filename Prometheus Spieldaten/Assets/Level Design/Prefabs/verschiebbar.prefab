@@ -150,13 +150,13 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 633599182721665298}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5670337159dedeb4a84bd6e2e6f3f3f9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   pushSource: {fileID: 5302648044050861343}
-  pushClip: {fileID: 0}
+  pushClip: {fileID: 8300000, guid: 438f4cb052859604bbd46d50eb91675f, type: 3}
   rigidbody: {fileID: 633599182721665303}
 --- !u!82 &5302648044050861343
 AudioSource:
@@ -170,7 +170,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 1
-  m_Volume: 1
+  m_Volume: 0.244
   m_Pitch: 1
   Loop: 0
   Mute: 0

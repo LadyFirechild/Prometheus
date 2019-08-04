@@ -16,7 +16,7 @@ public class Audio_Push : MonoBehaviour
 
     void Update()
     {
-        if (rigidbody.velocity.x != 0)
+        if (rigidbody.velocity.x >= 1 || rigidbody.velocity.x <= -1f)
         {
             if (!pushSource.isPlaying)
             {

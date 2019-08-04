@@ -1097,7 +1097,7 @@ GameObject:
   - component: {fileID: 305330918}
   m_Layer: 0
   m_Name: Rand rechts
-  m_TagString: Untagged
+  m_TagString: Fire
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -3022,6 +3022,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Startbogen (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 6965598767827591375, guid: 32e052b57a4176748b434323f3953134,
+        type: 3}
+      propertyPath: m_TagString
+      value: Fire
+      objectReference: {fileID: 0}
     - target: {fileID: 6965598767827591473, guid: 32e052b57a4176748b434323f3953134,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -3108,6 +3113,11 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 21300000, guid: 1dceaf795d58d954587b8d1b17e11da1,
         type: 3}
+    - target: {fileID: 8545314140473637500, guid: 32e052b57a4176748b434323f3953134,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 32e052b57a4176748b434323f3953134, type: 3}
 --- !u!1 &1072020356
@@ -3663,16 +3673,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 177103515}
     m_Modifications:
-    - target: {fileID: 5041229934545658594, guid: 2051d034f3f4edd4da2372e83fa6f95a,
-        type: 3}
-      propertyPath: m_Name
-      value: Fire-Final2
-      objectReference: {fileID: 0}
-    - target: {fileID: 5041229934545658594, guid: 2051d034f3f4edd4da2372e83fa6f95a,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 7232340303694499128, guid: 2051d034f3f4edd4da2372e83fa6f95a,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -3743,25 +3743,20 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 0.09693823
       objectReference: {fileID: 0}
+    - target: {fileID: 5041229934545658594, guid: 2051d034f3f4edd4da2372e83fa6f95a,
+        type: 3}
+      propertyPath: m_Name
+      value: Fire-Final2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5041229934545658594, guid: 2051d034f3f4edd4da2372e83fa6f95a,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4219535463486749139, guid: 2051d034f3f4edd4da2372e83fa6f95a,
         type: 3}
       propertyPath: m_LocalScale.x
       value: 3.5422153
-      objectReference: {fileID: 0}
-    - target: {fileID: 6831162213388136612, guid: 2051d034f3f4edd4da2372e83fa6f95a,
-        type: 3}
-      propertyPath: m_SortingLayerID
-      value: -1916381345
-      objectReference: {fileID: 0}
-    - target: {fileID: 6831162213388136612, guid: 2051d034f3f4edd4da2372e83fa6f95a,
-        type: 3}
-      propertyPath: m_SortingLayer
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6831162213388136612, guid: 2051d034f3f4edd4da2372e83fa6f95a,
-        type: 3}
-      propertyPath: m_SortingOrder
-      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 2028759700497463706, guid: 2051d034f3f4edd4da2372e83fa6f95a,
         type: 3}
@@ -3793,16 +3788,31 @@ PrefabInstance:
       propertyPath: m_SortingOrder
       value: 3
       objectReference: {fileID: 0}
-    - target: {fileID: 6135657589421252583, guid: 2051d034f3f4edd4da2372e83fa6f95a,
+    - target: {fileID: 6831162213388136612, guid: 2051d034f3f4edd4da2372e83fa6f95a,
+        type: 3}
+      propertyPath: m_SortingLayerID
+      value: -1916381345
+      objectReference: {fileID: 0}
+    - target: {fileID: 6831162213388136612, guid: 2051d034f3f4edd4da2372e83fa6f95a,
+        type: 3}
+      propertyPath: m_SortingLayer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6831162213388136612, guid: 2051d034f3f4edd4da2372e83fa6f95a,
         type: 3}
       propertyPath: m_SortingOrder
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 4403262417318927064, guid: 2051d034f3f4edd4da2372e83fa6f95a,
         type: 3}
       propertyPath: pauseMenu
       value: 
       objectReference: {fileID: 2139381977}
+    - target: {fileID: 6135657589421252583, guid: 2051d034f3f4edd4da2372e83fa6f95a,
+        type: 3}
+      propertyPath: m_SortingOrder
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2051d034f3f4edd4da2372e83fa6f95a, type: 3}
 --- !u!1 &1304144023
@@ -4510,7 +4520,7 @@ GameObject:
   - component: {fileID: 1578921245}
   m_Layer: 0
   m_Name: Rand links
-  m_TagString: Untagged
+  m_TagString: Fire
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -6273,6 +6283,11 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 6965598767827591375, guid: 32e052b57a4176748b434323f3953134,
+        type: 3}
+      propertyPath: m_TagString
+      value: Fire
+      objectReference: {fileID: 0}
     - target: {fileID: 6965598767827591473, guid: 32e052b57a4176748b434323f3953134,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -6383,6 +6398,8 @@ GameObject:
   - component: {fileID: 2088104514}
   - component: {fileID: 2088104517}
   - component: {fileID: 2088104516}
+  - component: {fileID: 2088104519}
+  - component: {fileID: 2088104518}
   m_Layer: 0
   m_Name: Feuerschale2
   m_TagString: Untagged
@@ -6491,6 +6508,117 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 8.270262, y: 11.269121}
   m_EdgeRadius: 0
+--- !u!82 &2088104518
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2088104513}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 0}
+  m_PlayOnAwake: 1
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+--- !u!114 &2088104519
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2088104513}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a9b9cd536bf88844f891866ad17a99fd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bigFireSource: {fileID: 2088104518}
+  bigFireClip: {fileID: 8300000, guid: 1e07638bf0ed04c49a94ffcb01ccd78b, type: 3}
+  pauseMenu: {fileID: 2139381977}
 --- !u!1 &2139381972
 GameObject:
   m_ObjectHideFlags: 0
