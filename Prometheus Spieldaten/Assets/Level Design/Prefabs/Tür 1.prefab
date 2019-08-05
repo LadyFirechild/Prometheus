@@ -12,8 +12,8 @@ GameObject:
   - component: {fileID: 1335600418686243321}
   - component: {fileID: 1335600418686243323}
   m_Layer: 0
-  m_Name: "T\xFCr3"
-  m_TagString: Untagged
+  m_Name: "T\xFCr 1"
+  m_TagString: levelElement
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

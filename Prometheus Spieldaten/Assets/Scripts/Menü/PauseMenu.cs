@@ -11,6 +11,7 @@ public class PauseMenu : MonoBehaviour
     public bool GameIsPaused = false;    //setze den Wert ob das Spiel pausiert auf falsch
 
     public GameObject PauseMenuUI;              //erstelle ein öffentliches Game-Object mit dem Namen Pause
+    public GameObject Options;
 
     // Update is called once per frame
     void Update()
@@ -28,11 +29,13 @@ public class PauseMenu : MonoBehaviour
         }
     }
 
-    void Resume()
+    public void Resume()
     {
         PauseMenuUI.SetActive(false);
         Time.timeScale = 1f;
         GameIsPaused = false;
+        Debug.Log("Hi");
+        Options.SetActive(false);
     }
 
     void Pause()

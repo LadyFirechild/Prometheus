@@ -80,7 +80,7 @@ namespace Prometheus
 
         public void OnTriggerEnter2D(Collider2D trigger)
         {
-            if (trigger.gameObject.layer == whatIsGround && trigger.gameObject.tag != "NormalPU" && trigger.gameObject.tag != "BigPU" && trigger.gameObject.tag != "SmallPU" && trigger.gameObject.tag != "Flame" && trigger.gameObject.tag != "Fire" && trigger.gameObject.tag != "BigChalice")
+            if (trigger.gameObject.layer == whatIsGround && trigger.gameObject.tag != "NormalPU" && trigger.gameObject.tag != "BigPU" && trigger.gameObject.tag != "SmallPU" && trigger.gameObject.tag != "Flame" && trigger.gameObject.tag != "Fire" && trigger.gameObject.tag != "BigChalice" && trigger.gameObject.tag != "levelElement")
             {
                 grounded = true;
             }
@@ -88,7 +88,7 @@ namespace Prometheus
 
         public void OnTriggerStay2D(Collider2D trigger)
         {
-            if (trigger.gameObject.tag != "NormalPU" && trigger.gameObject.tag != "BigPU" && trigger.gameObject.tag != "SmallPU" && trigger.gameObject.tag != "Fire" && trigger.gameObject.tag != "Flame" && trigger.gameObject.tag != "BigChalice")
+            if (trigger.gameObject.tag != "NormalPU" && trigger.gameObject.tag != "BigPU" && trigger.gameObject.tag != "SmallPU" && trigger.gameObject.tag != "Fire" && trigger.gameObject.tag != "Flame" && trigger.gameObject.tag != "BigChalice" && trigger.gameObject.tag != "levelElement")
             {
                 grounded = true;
             }
