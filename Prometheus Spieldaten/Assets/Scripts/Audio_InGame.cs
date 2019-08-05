@@ -68,7 +68,7 @@ namespace Prometheus
             if (!playerMovement.grounded)
             {
                 allWalkSources[Random.Range(0, walkClipArray.Length)].Stop();
-                deltaSoundWalk = 0;
+                deltaSoundWalk = TimeBetweenSteps;
             }
         }
 

@@ -2,39 +2,47 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class MorphNormalSound : MonoBehaviour
+namespace Prometheus
 {
-    public AudioClip NormalClip;
-    public AudioSource NormalSource;
-    public bool playerBool = false;
-    public float playedTimes = 0;
 
-
-    void Awake()
+    public class MorphNormalSound : MonoBehaviour
     {
-        NormalSource.clip = NormalClip;
-    }
+        public MorphBigSound mbs;
+        public MorphSmallSound mss;
+        public AudioClip NormalClip;
+        public AudioSource NormalSource;
+        public bool playerBool = false;
+        public float playedTimes = 0;
 
-    void OnTriggerEnter2D(Collider2D other)
-    {
-        if (other.gameObject.tag == "Player")
+
+        void Awake()
         {
-            playerBool = true;
-            if (!NormalSource.isPlaying && playedTimes == 0)
+            NormalSource.clip = NormalClip;
+        }
+
+        void OnTriggerEnter2D(Collider2D other)
+        {
+            if (other.gameObject.tag == "Player")
             {
-                NormalSource.Play();
-                Debug.Log("Sound Playing");
-                playerBool = false;
-                playedTimes++;
+                playerBool = true;
+                if (!NormalSource.isPlaying && playedTimes == 0)
+                {
+                    NormalSource.Play();
+                    Debug.Log("Sound Playing");
+                    playerBool = false;
+                    playedTimes++;
+                    mbs.playedTimes = 0;
+                    mss.playedTimes = 0;
+                }
             }
         }
-    }
 
-    void OnTriggerStay2D(Collider2D other)
-    {
-        if (other.gameObject.tag == "Player")
+        void OnTriggerStay2D(Collider2D other)
         {
-            playerBool = false;
+            if (other.gameObject.tag == "Player")
+            {
+                playerBool = false;
+            }
         }
     }
 }

@@ -7,6 +7,9 @@ namespace Prometheus
 
     public class MorphSmallSound : MonoBehaviour
     {
+
+        public MorphNormalSound mns;
+        public MorphBigSound mbs;
         public AudioClip SmallClip;
         public AudioSource SmallSource;
         public bool playerBool = false;
@@ -29,6 +32,8 @@ namespace Prometheus
                     Debug.Log("Sound Playing");
                     playerBool = false;
                     playedTimes++;
+                    mns.playedTimes = 0;
+                    mbs.playedTimes = 0;
                 }
             }
         }
