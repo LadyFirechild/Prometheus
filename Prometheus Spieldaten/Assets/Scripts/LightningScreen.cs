@@ -41,7 +41,7 @@ public class LightningScreen : MonoBehaviour
             Vector2 randomSpawn = new Vector2(horizontal, vertical);
             GameObject LightningClone = (Instantiate(lightning, randomSpawn, Quaternion.identity));
 
-            Destroy(LightningClone, 5f);
+            Destroy(LightningClone, Interval * 2f);
         }
 
     }

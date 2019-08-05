@@ -11,10 +11,15 @@ public class Audio_Background : MonoBehaviour
     public AudioSource rushSource;
     public PauseMenu pauseMenu;
     public ChaliceCheck chaliceCheck;
+    public AudioSource thunderSource;
+    public AudioClip thunderClip;
+    public float thunderPlayed = 0;
 
     void Start()
     {
         calmSource.clip = calmClip;
+        rushSource.clip = rushClip;
+        thunderSource.clip = thunderClip;
     }
 
     void Update()
@@ -51,6 +56,11 @@ public class Audio_Background : MonoBehaviour
             {
                 rushSource.UnPause();
             }
+        }
+        if (chaliceCheck.bigChalice && thunderPlayed == 0)
+        {
+            thunderSource.Play();
+            thunderPlayed++;
         }
     }
 
