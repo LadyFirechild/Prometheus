@@ -34,7 +34,7 @@ public class GoalScript : MonoBehaviour
     {
         if(FireCounter.collectible == FireCounter.activeFires)
         {
-            SceneManager.LoadScene("Tutorial");
+            SceneManager.LoadScene("Level3");
         }
         if(FireCounter.collectible != FireCounter.activeFires)
         {
