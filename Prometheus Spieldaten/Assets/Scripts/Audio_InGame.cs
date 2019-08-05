@@ -46,7 +46,7 @@ namespace Prometheus
         }
 
         // Update is called once per frame
-        void Update()
+        void FixedUpdate()
         {
             if (movementBlocked) return;
 
@@ -57,7 +57,6 @@ namespace Prometheus
 
             if (playerMovement.grounded && (playerInput.right || playerInput.left))
             {
-
                 deltaSoundWalk += Time.deltaTime;
                 if (deltaSoundWalk >= TimeBetweenSteps)
                 {
