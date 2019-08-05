@@ -16,6 +16,7 @@ TagManager:
   - BigPU
   - BigChalice
   - Moveable
+  - levelElement
   layers:
   - Default
   - TransparentFX

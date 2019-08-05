@@ -1097,7 +1097,7 @@ GameObject:
   - component: {fileID: 305330918}
   m_Layer: 0
   m_Name: Rand rechts
-  m_TagString: Fire
+  m_TagString: levelElement
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -3025,7 +3025,7 @@ PrefabInstance:
     - target: {fileID: 6965598767827591375, guid: 32e052b57a4176748b434323f3953134,
         type: 3}
       propertyPath: m_TagString
-      value: Fire
+      value: levelElement
       objectReference: {fileID: 0}
     - target: {fileID: 6965598767827591473, guid: 32e052b57a4176748b434323f3953134,
         type: 3}
@@ -3673,6 +3673,16 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 177103515}
     m_Modifications:
+    - target: {fileID: 5041229934545658594, guid: 2051d034f3f4edd4da2372e83fa6f95a,
+        type: 3}
+      propertyPath: m_Name
+      value: Fire-Final2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5041229934545658594, guid: 2051d034f3f4edd4da2372e83fa6f95a,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7232340303694499128, guid: 2051d034f3f4edd4da2372e83fa6f95a,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -3742,16 +3752,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalScale.z
       value: 0.09693823
-      objectReference: {fileID: 0}
-    - target: {fileID: 5041229934545658594, guid: 2051d034f3f4edd4da2372e83fa6f95a,
-        type: 3}
-      propertyPath: m_Name
-      value: Fire-Final2
-      objectReference: {fileID: 0}
-    - target: {fileID: 5041229934545658594, guid: 2051d034f3f4edd4da2372e83fa6f95a,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4219535463486749139, guid: 2051d034f3f4edd4da2372e83fa6f95a,
         type: 3}
@@ -4520,7 +4520,7 @@ GameObject:
   - component: {fileID: 1578921245}
   m_Layer: 0
   m_Name: Rand links
-  m_TagString: Fire
+  m_TagString: levelElement
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -6286,7 +6286,7 @@ PrefabInstance:
     - target: {fileID: 6965598767827591375, guid: 32e052b57a4176748b434323f3953134,
         type: 3}
       propertyPath: m_TagString
-      value: Fire
+      value: Untagged
       objectReference: {fileID: 0}
     - target: {fileID: 6965598767827591473, guid: 32e052b57a4176748b434323f3953134,
         type: 3}
@@ -6634,7 +6634,7 @@ GameObject:
   - component: {fileID: 2139381977}
   m_Layer: 5
   m_Name: Canvas
-  m_TagString: Untagged
+  m_TagString: levelElement
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

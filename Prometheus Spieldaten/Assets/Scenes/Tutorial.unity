@@ -3186,6 +3186,12 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 6053121119611950666, guid: 52370f4ba9bae5344973dd6ab9139dce,
+        type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 84af4e84902b78f4fbc456ffc7d23789,
+        type: 3}
     - target: {fileID: 6053121119611950665, guid: 52370f4ba9bae5344973dd6ab9139dce,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -3256,12 +3262,6 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 6053121119611950666, guid: 52370f4ba9bae5344973dd6ab9139dce,
-        type: 3}
-      propertyPath: m_Sprite
-      value: 
-      objectReference: {fileID: 21300000, guid: 84af4e84902b78f4fbc456ffc7d23789,
-        type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 52370f4ba9bae5344973dd6ab9139dce, type: 3}
 --- !u!4 &517252656 stripped
@@ -7166,6 +7166,12 @@ PrefabInstance:
       propertyPath: m_Name
       value: Wandtafel Schalter2
       objectReference: {fileID: 0}
+    - target: {fileID: 6053121119611950666, guid: 52370f4ba9bae5344973dd6ab9139dce,
+        type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 84af4e84902b78f4fbc456ffc7d23789,
+        type: 3}
     - target: {fileID: 6053121119611950665, guid: 52370f4ba9bae5344973dd6ab9139dce,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -7236,12 +7242,6 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 6053121119611950666, guid: 52370f4ba9bae5344973dd6ab9139dce,
-        type: 3}
-      propertyPath: m_Sprite
-      value: 
-      objectReference: {fileID: 21300000, guid: 84af4e84902b78f4fbc456ffc7d23789,
-        type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 52370f4ba9bae5344973dd6ab9139dce, type: 3}
 --- !u!4 &1129811517
@@ -7325,6 +7325,12 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 6053121119611950666, guid: 52370f4ba9bae5344973dd6ab9139dce,
+        type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 84af4e84902b78f4fbc456ffc7d23789,
+        type: 3}
     - target: {fileID: 6053121119611950665, guid: 52370f4ba9bae5344973dd6ab9139dce,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -7395,12 +7401,6 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 6053121119611950666, guid: 52370f4ba9bae5344973dd6ab9139dce,
-        type: 3}
-      propertyPath: m_Sprite
-      value: 
-      objectReference: {fileID: 21300000, guid: 84af4e84902b78f4fbc456ffc7d23789,
-        type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 52370f4ba9bae5344973dd6ab9139dce, type: 3}
 --- !u!1001 &1208341635
@@ -8166,6 +8166,12 @@ PrefabInstance:
       propertyPath: m_Name
       value: Wandtafel Schieben
       objectReference: {fileID: 0}
+    - target: {fileID: 6053121119611950666, guid: 52370f4ba9bae5344973dd6ab9139dce,
+        type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 84af4e84902b78f4fbc456ffc7d23789,
+        type: 3}
     - target: {fileID: 6053121119611950665, guid: 52370f4ba9bae5344973dd6ab9139dce,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -8236,12 +8242,6 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 6053121119611950666, guid: 52370f4ba9bae5344973dd6ab9139dce,
-        type: 3}
-      propertyPath: m_Sprite
-      value: 
-      objectReference: {fileID: 21300000, guid: 84af4e84902b78f4fbc456ffc7d23789,
-        type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 52370f4ba9bae5344973dd6ab9139dce, type: 3}
 --- !u!4 &1354174657
@@ -8722,6 +8722,12 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 6053121119611950666, guid: 52370f4ba9bae5344973dd6ab9139dce,
+        type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 84af4e84902b78f4fbc456ffc7d23789,
+        type: 3}
     - target: {fileID: 6053121119611950665, guid: 52370f4ba9bae5344973dd6ab9139dce,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -8792,12 +8798,6 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 6053121119611950666, guid: 52370f4ba9bae5344973dd6ab9139dce,
-        type: 3}
-      propertyPath: m_Sprite
-      value: 
-      objectReference: {fileID: 21300000, guid: 84af4e84902b78f4fbc456ffc7d23789,
-        type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 52370f4ba9bae5344973dd6ab9139dce, type: 3}
 --- !u!4 &1506340087
@@ -8923,6 +8923,12 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 6053121119611950666, guid: 52370f4ba9bae5344973dd6ab9139dce,
+        type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 84af4e84902b78f4fbc456ffc7d23789,
+        type: 3}
     - target: {fileID: 6053121119611950665, guid: 52370f4ba9bae5344973dd6ab9139dce,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -8993,12 +8999,6 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 6053121119611950666, guid: 52370f4ba9bae5344973dd6ab9139dce,
-        type: 3}
-      propertyPath: m_Sprite
-      value: 
-      objectReference: {fileID: 21300000, guid: 84af4e84902b78f4fbc456ffc7d23789,
-        type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 52370f4ba9bae5344973dd6ab9139dce, type: 3}
 --- !u!4 &1560441384

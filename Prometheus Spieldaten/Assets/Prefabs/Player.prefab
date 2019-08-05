@@ -1492,7 +1492,6 @@ MonoBehaviour:
   jumpClips:
   - {fileID: 8300000, guid: 26150653e55e37448abc92fb648444df, type: 3}
   - {fileID: 8300000, guid: a6ed0194ce87cdd4787d1ec0efbc2964, type: 3}
-  jumpSources: []
   walkClipArray:
   - {fileID: 8300000, guid: 9def05015b9561f4ebe38a9b95571c84, type: 3}
   - {fileID: 8300000, guid: f84bbe1f6ac16854088f9fc96bdbf23e, type: 3}
