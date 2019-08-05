@@ -201,7 +201,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 1
-  m_Volume: 1
+  m_Volume: 0.3
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -300,7 +300,7 @@ MonoBehaviour:
   BigClip: {fileID: 8300000, guid: 2145190bd82d25049abe8e58f1b3fd2a, type: 3}
   BigSource: {fileID: 4185466781519679139}
   playerBool: 0
-  pUSize: {fileID: 0}
+  playedTimes: 0
 --- !u!1001 &3555875150227917270
 PrefabInstance:
   m_ObjectHideFlags: 0
