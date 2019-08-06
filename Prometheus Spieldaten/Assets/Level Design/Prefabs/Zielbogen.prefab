@@ -89,6 +89,8 @@ GameObject:
   m_Component:
   - component: {fileID: 6965598767827591473}
   - component: {fileID: 6965598767827591472}
+  - component: {fileID: 485600828922311296}
+  - component: {fileID: 8104734993544330853}
   m_Layer: 0
   m_Name: Zielbogen
   m_TagString: Untagged
@@ -160,6 +162,34 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &485600828922311296
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6965598767827591375}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 786e868df22a40349aec782f9abd6b5c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  FireCounter: {fileID: 0}
+  Panel: {fileID: 0}
+  Ziel_versperrt: {fileID: 0}
+  "Ziel_ge\xF6ffnet": {fileID: 6965598767827591375}
+--- !u!114 &8104734993544330853
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6965598767827591375}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0824be2c7aa61634fbc99c2e9f8a36ce, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &8545314140473637500
 GameObject:
   m_ObjectHideFlags: 0
@@ -177,7 +207,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &2741183605515454675
 Transform:
   m_ObjectHideFlags: 0
