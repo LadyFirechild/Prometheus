@@ -14,10 +14,14 @@ public class GoalScript : MonoBehaviour
     public GameObject Ziel_versperrt;
     public GameObject Ziel_geöffnet;
 
+    public GameObject FeuerOn;
+    public GameObject FeuerOff;
+
     void Start()
     {
         Panel.SetActive(false);
-       
+        FeuerOn.SetActive(false);
+
     }
 
 
@@ -25,8 +29,11 @@ public class GoalScript : MonoBehaviour
     {
         
         if (FireCounter.collectible == FireCounter.activeFires)
-            Destroy(Ziel_versperrt);
-
+        { 
+        Destroy(Ziel_versperrt);
+        FeuerOn.SetActive(true);
+        FeuerOff.SetActive(false);
+        }
 
 
     }
@@ -39,9 +46,20 @@ public class GoalScript : MonoBehaviour
         }
         if(FireCounter.collectible != FireCounter.activeFires)
         {
-            Panel.SetActive(true);
-
-
+           
+            UIEinblend.SetActive(true);
+            StartCoroutine(Example());
+            
         }
+
+        IEnumerator Example()
+
+        {
+            yield return new WaitForSeconds(1);
+            Destroy(UIEinblend);
+            Panel.SetActive(true);
+        }
+
+          
     }
 }
