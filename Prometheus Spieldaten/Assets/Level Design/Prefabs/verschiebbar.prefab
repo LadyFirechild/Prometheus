@@ -16,6 +16,7 @@ GameObject:
   - component: {fileID: 8898622151339013498}
   - component: {fileID: 5302648044050861343}
   - component: {fileID: 4061316545874914885}
+  - component: {fileID: 9039429821191364364}
   m_Layer: 0
   m_Name: verschiebbar
   m_TagString: Moveable
@@ -94,7 +95,7 @@ BoxCollider2D:
   m_GameObject: {fileID: 633599182721665298}
   m_Enabled: 1
   m_Density: 1
-  m_Material: {fileID: 6200000, guid: e294ff5a316ec3b49b09f3e8e65403f8, type: 2}
+  m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
@@ -269,3 +270,29 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rigidbody: {fileID: 0}
+--- !u!61 &9039429821191364364
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 633599182721665298}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: -0.94617915}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1.78, y: 2.36}
+    newSize: {x: 1.78, y: 2.36}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 1.78, y: 0.4676414}
+  m_EdgeRadius: 0

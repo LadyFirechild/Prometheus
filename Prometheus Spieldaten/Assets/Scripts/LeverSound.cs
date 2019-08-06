@@ -18,7 +18,7 @@ public class LeverSound : MonoBehaviour
         leverSource.clip = leverClip;
     }
 
-    void OnCollisionEnter2D(Collision2D other)
+    void OnTriggerEnter2D(Collider2D other)
     {
         if (other.gameObject.tag == "Player" || other.gameObject.tag == "Moveable")
         {
@@ -32,7 +32,7 @@ public class LeverSound : MonoBehaviour
         }
     }
 
-    void OnCollisionStay2D(Collision2D other)
+    void OnTriggerStay2D(Collider2D other)
     {
         if (other.gameObject.tag == "Player" || other.gameObject.tag == "Moveable")
         {
@@ -40,7 +40,7 @@ public class LeverSound : MonoBehaviour
         }
     }
 
-    void OnCollisionExit2D(Collision2D other)
+    void OnTriggerExit2D(Collider2D other)
     {
         if (other.gameObject.tag == "Player" || other.gameObject.tag == "Moveable")
         {
