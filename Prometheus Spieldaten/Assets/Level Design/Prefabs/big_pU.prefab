@@ -79,6 +79,32 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!61 &4907793396623676034
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5400692324422639489}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 6200000, guid: e294ff5a316ec3b49b09f3e8e65403f8, type: 2}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -0.2985916, y: 2.0574815}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 4, y: 0.5}
+    newSize: {x: 2.0074942, y: 0.48}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 2
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 3.6391602, y: 4.052281}
+  m_EdgeRadius: 0
 --- !u!1 &6889501714692682445
 GameObject:
   m_ObjectHideFlags: 0
@@ -89,12 +115,12 @@ GameObject:
   m_Component:
   - component: {fileID: 6889501714692682448}
   - component: {fileID: 6889501714692682447}
-  - component: {fileID: 6889501714692682446}
-  - component: {fileID: 4185466781519679139}
-  - component: {fileID: 8023786885430052433}
+  - component: {fileID: 3882421695614048788}
+  - component: {fileID: 3376711324098572683}
+  - component: {fileID: 1368473855765631554}
   m_Layer: 0
   m_Name: big_pU
-  m_TagString: BigPU
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -163,33 +189,7 @@ SpriteRenderer:
   m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!61 &6889501714692682446
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6889501714692682445}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 6200000, guid: e294ff5a316ec3b49b09f3e8e65403f8, type: 2}
-  m_IsTrigger: 1
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: -0.0020391345, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 4, y: 0.5}
-    newSize: {x: 2.0074942, y: 0.48}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 2
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 2.018958, y: 0.5}
-  m_EdgeRadius: 0
---- !u!82 &4185466781519679139
+--- !u!82 &3882421695614048788
 AudioSource:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -286,7 +286,7 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!114 &8023786885430052433
+--- !u!114 &3376711324098572683
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -301,9 +301,35 @@ MonoBehaviour:
   mns: {fileID: 0}
   mss: {fileID: 0}
   BigClip: {fileID: 8300000, guid: 2145190bd82d25049abe8e58f1b3fd2a, type: 3}
-  BigSource: {fileID: 4185466781519679139}
+  BigSource: {fileID: 3882421695614048788}
   playerBool: 0
   playedTimes: 0
+--- !u!61 &1368473855765631554
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6889501714692682445}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 6200000, guid: e294ff5a316ec3b49b09f3e8e65403f8, type: 2}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -0.2985916, y: 0.38371795}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 4, y: 0.5}
+    newSize: {x: 2.0074942, y: 0.48}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 2
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 3.6391602, y: 0.704754}
+  m_EdgeRadius: 0
 --- !u!1001 &3555875150227917270
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -315,6 +341,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: "X-PowerUpGro\xDF"
+      objectReference: {fileID: 0}
+    - target: {fileID: 8910966242884097623, guid: 91e01f88fbbe9c345878c44f3f968e0b,
+        type: 3}
+      propertyPath: m_TagString
+      value: BigPU
       objectReference: {fileID: 0}
     - target: {fileID: 8910966242884097620, guid: 91e01f88fbbe9c345878c44f3f968e0b,
         type: 3}
@@ -378,6 +409,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 91e01f88fbbe9c345878c44f3f968e0b, type: 3}
+--- !u!1 &5400692324422639489 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8910966242884097623, guid: 91e01f88fbbe9c345878c44f3f968e0b,
+    type: 3}
+  m_PrefabInstance: {fileID: 3555875150227917270}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &5400692324422639490 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8910966242884097620, guid: 91e01f88fbbe9c345878c44f3f968e0b,

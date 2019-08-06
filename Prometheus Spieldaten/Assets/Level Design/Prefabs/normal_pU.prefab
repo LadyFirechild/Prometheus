@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 7020965679574638960}
   m_Layer: 0
   m_Name: normal_pU
-  m_TagString: NormalPU
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -304,6 +304,32 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!61 &869593962021039170
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8348741368975064299}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 6200000, guid: e294ff5a316ec3b49b09f3e8e65403f8, type: 2}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -0.2985916, y: 2.160858}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 4, y: 0.5}
+    newSize: {x: 2.0074942, y: 0.48}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 2
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 3.6391602, y: 4.2590337}
+  m_EdgeRadius: 0
 --- !u!1001 &4423237793985378823
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -315,6 +341,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: X-PowerUpKlein
+      objectReference: {fileID: 0}
+    - target: {fileID: 5674200575530059500, guid: 24e526d96204fbb4fb9acd66d41c46fb,
+        type: 3}
+      propertyPath: m_TagString
+      value: NormalPU
       objectReference: {fileID: 0}
     - target: {fileID: 5674200575530059503, guid: 24e526d96204fbb4fb9acd66d41c46fb,
         type: 3}
@@ -378,6 +409,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 24e526d96204fbb4fb9acd66d41c46fb, type: 3}
+--- !u!1 &8348741368975064299 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5674200575530059500, guid: 24e526d96204fbb4fb9acd66d41c46fb,
+    type: 3}
+  m_PrefabInstance: {fileID: 4423237793985378823}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &8348741368975064296 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5674200575530059503, guid: 24e526d96204fbb4fb9acd66d41c46fb,

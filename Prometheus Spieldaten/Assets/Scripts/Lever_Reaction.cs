@@ -5,69 +5,71 @@ using UnityEngine;
 public class Lever_Reaction : MonoBehaviour
 {
     public GameObject Door;
-    public BoxCollider2D BC;
+    public BoxCollider2D BoxColl;
 
-    public void Start()
+    void Start()
     {
-        BC = GetComponent<BoxCollider2D>();
+        BoxColl = GetComponent<BoxCollider2D>();
     }
 
-    public void OnCollisionEnter2D(Collision2D other)
-    {
-        if (other.gameObject.tag == "Moveable")
-        {
-            BC.isTrigger = true;
-            Door.gameObject.SetActive(false);
-        }
-    }
 
-    private void OnCollisionStay2D(Collision2D other)
-    {
-        if (other.gameObject.tag == "Moveable")
-        {
-            BC.isTrigger = true;
-            Door.gameObject.SetActive(false);
-        }
-    }
 
-    public void OnCollisionExit2D(Collision2D other)
-    {
-        if (other.gameObject.tag == "Moveable")
-        {
-            BC.isTrigger = false;
-            Door.gameObject.SetActive(true);
-        }
-        if (other.gameObject.tag == "Player")
-        {
-            Door.gameObject.SetActive(true);
-        }
-    }
-    private void OnTriggerEnter2D(Collider2D collision)
-    {
-        if(collision.gameObject.tag == "Player")
-        {
-            BC.isTrigger = false;
-            Door.gameObject.SetActive(false);
-        }
-    }
-
-    private void OnTriggerStay2D(Collider2D collision)
+    void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.gameObject.tag == "Player")
         {
-            BC.isTrigger = false;
+
             Door.gameObject.SetActive(false);
         }
-    }
-    private void OnTriggerExit2D(Collider2D collision)
-    {
-        if(collision.gameObject.tag == "Player")
+
+        if (collision.gameObject.tag == "Moveable")
         {
-            BC.isTrigger = true;
-            //Door.gameObject.SetActive(true);
+            Physics2D.IgnoreCollision(collision.collider, BoxColl);
+        }
+    }
+
+    private void OnCollisionStay2D(Collision2D collision)
+    {
+        if (collision.gameObject.tag == "Player")
+        {
+
+            Door.gameObject.SetActive(false);
         }
         if (collision.gameObject.tag == "Moveable")
         {
+            Physics2D.IgnoreCollision(collision.collider, BoxColl);
+        }
+    }
+    private void OnCollisionExit2D(Collision2D collision)
+    {
+        if (collision.gameObject.tag == "Player" || collision.gameObject.tag == "Moveable")
+        {
+
+            Door.gameObject.SetActive(true);
+        }
+    }
+
+    public void OnTriggerEnter2D(Collider2D other)
+    {
+        if (other.gameObject.tag == "Moveable")
+        {
+
+            Door.gameObject.SetActive(false);
+        }
+    }
+    public void OnTriggerStay2D(Collider2D other)
+    {
+        if (other.gameObject.tag == "Moveable")
+        {
+
+            Door.gameObject.SetActive(false);
+        }
+    }
+    public void OnTriggerExit2D(Collider2D other)
+    {
+        if (other.gameObject.tag == "Moveable")
+        {
+
             Door.gameObject.SetActive(true);
         }
     }
