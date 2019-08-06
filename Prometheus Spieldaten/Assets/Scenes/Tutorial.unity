@@ -5218,6 +5218,16 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 152309596}
     m_Modifications:
+    - target: {fileID: 6965598767827591375, guid: 90ef8433b53bbc84bb7fe60f72be1702,
+        type: 3}
+      propertyPath: m_Name
+      value: Zielbogen
+      objectReference: {fileID: 0}
+    - target: {fileID: 6965598767827591375, guid: 90ef8433b53bbc84bb7fe60f72be1702,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 485600828922311296, guid: 90ef8433b53bbc84bb7fe60f72be1702,
         type: 3}
       propertyPath: Ziel_versperrt
@@ -5233,16 +5243,6 @@ PrefabInstance:
       propertyPath: FireCounter
       value: 
       objectReference: {fileID: 1659439987}
-    - target: {fileID: 6965598767827591375, guid: 90ef8433b53bbc84bb7fe60f72be1702,
-        type: 3}
-      propertyPath: m_Name
-      value: Zielbogen
-      objectReference: {fileID: 0}
-    - target: {fileID: 6965598767827591375, guid: 90ef8433b53bbc84bb7fe60f72be1702,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 6965598767827591473, guid: 90ef8433b53bbc84bb7fe60f72be1702,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -9322,6 +9322,11 @@ PrefabInstance:
       propertyPath: m_SortingLayer
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 633599182721665289, guid: db8e160151edade4fb300a1faae306a1,
+        type: 3}
+      propertyPath: m_SortingOrder
+      value: 10
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: db8e160151edade4fb300a1faae306a1, type: 3}
 --- !u!4 &1645385392 stripped
@@ -12175,6 +12180,11 @@ PrefabInstance:
       propertyPath: Door
       value: 
       objectReference: {fileID: 1798058514}
+    - target: {fileID: 5304390107799276992, guid: 6cab9c53752395f469ea55dd42e939e3,
+        type: 3}
+      propertyPath: m_Volume
+      value: 0.22
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6cab9c53752395f469ea55dd42e939e3, type: 3}
 --- !u!1001 &3977377222484764873
@@ -12192,7 +12202,7 @@ PrefabInstance:
     - target: {fileID: 3977377221768007385, guid: 4ee3cd50b31b47048a62fe9d6db0dcf8,
         type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3977377221768007391, guid: 4ee3cd50b31b47048a62fe9d6db0dcf8,
         type: 3}
