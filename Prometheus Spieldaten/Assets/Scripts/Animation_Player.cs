@@ -57,7 +57,7 @@ namespace Prometheus
                 }
             }
 
-            if (!playerInput.right && !playerInput.left && !playerInput.jump)
+            if (!playerInput.right && !playerInput.left && !playerInput.jump && playerMovement.grounded)
             {
                 Idle = true;
                 walkAnim.animation.Stop("walkAnim");
@@ -79,10 +79,11 @@ namespace Prometheus
                 walkAnim.transform.localScale = new Vector2(Mathf.Abs(walkAnim.transform.localScale.x) * 1, walkAnim.transform.localScale.y);
             }
 
-            if ((velocity.y > 0 || velocity.y == 0))
+            if (velocity.y >= 0)
             {
                 if (playerInput.jump && playerMovement.grounded)
                 {
+                    
                     walkAnim.animation.Play("jumpAnim", 1);
                     AirBorne = true;
                 }
