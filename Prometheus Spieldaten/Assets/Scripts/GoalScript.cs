@@ -8,6 +8,8 @@ public class GoalScript : MonoBehaviour
 {
     public Fire_Counter FireCounter;
     public GameObject Panel;
+
+    public GameObject UIEinblend;
    
     public GameObject Ziel_versperrt;
     public GameObject Ziel_geöffnet;
@@ -15,7 +17,6 @@ public class GoalScript : MonoBehaviour
     void Start()
     {
         Panel.SetActive(false);
-
        
     }
 
