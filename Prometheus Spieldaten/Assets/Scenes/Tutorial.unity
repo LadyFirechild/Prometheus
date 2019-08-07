@@ -6668,6 +6668,12 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 987766456}
   m_PrefabAsset: {fileID: 0}
+--- !u!4 &1080646411 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 4607022863687342972, guid: 8f6da66d399787241b87f99d569b1d59,
+    type: 3}
+  m_PrefabInstance: {fileID: 4607022862972341020}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &1087317153 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7238585762265855734, guid: 6ae6eb0b0e5f8854da870fb970e65097,
@@ -13070,6 +13076,21 @@ PrefabInstance:
         type: 3}
       propertyPath: TimeBetweenSteps
       value: 0.6
+      objectReference: {fileID: 0}
+    - target: {fileID: 7865570146644648171, guid: 8f6da66d399787241b87f99d569b1d59,
+        type: 3}
+      propertyPath: target
+      value: 
+      objectReference: {fileID: 1080646411}
+    - target: {fileID: 2721598552902794609, guid: 8f6da66d399787241b87f99d569b1d59,
+        type: 3}
+      propertyPath: m_SortingLayerID
+      value: -1698836729
+      objectReference: {fileID: 0}
+    - target: {fileID: 2721598552902794609, guid: 8f6da66d399787241b87f99d569b1d59,
+        type: 3}
+      propertyPath: m_SortingLayer
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8f6da66d399787241b87f99d569b1d59, type: 3}
