@@ -36,7 +36,7 @@ public class Totmann : MonoBehaviour
         if (collision.gameObject)
         {
             Tür.SetActive(false);
-            anim.SetActive(true);
+            //anim.SetActive(true);
         }
     }
 
