@@ -8,41 +8,48 @@ public class Camera_Scroll : MonoBehaviour
 
     public float time = 5.0f;
     public float CameraDist = 200;
+    public GameObject camMove;
 
     public Transform startPosition;
     public Transform endPosition;
 
-    // Start is called before the first frame update
     void Start()
     {
+        camMove.GetComponent<CameraMovement>().enabled = false;
         if (myCam == null)
+        
             myCam = Camera.main;
+        
         if (endPosition == null)
+        
             endPosition = GameObject.FindWithTag("Player").transform;
-        StartCoroutine(CameraPan());    
+        
+
+        StartCoroutine(CameraPan());
+        
     }
 
 
     IEnumerator CameraPan()
     {
         GlobalEvent.MovementAllowed?.Invoke(false);
+        Debug.Log("MoveBlock");
         myCam.transform.position = startPosition.position;
         float elapsed = Time.deltaTime;
         float smooth;
-
         Vector3 nextPos;
+
 
         while (elapsed <= time)
         {
             smooth = elapsed / time;
             smooth = smooth * smooth * (3 - 2 * smooth);
-
             nextPos = Vector3.Lerp(startPosition.position, endPosition.position, smooth);
+            Debug.Log(nextPos);
             nextPos.z = -CameraDist;
             myCam.transform.position = nextPos;
-
             elapsed += Time.deltaTime;
-        yield return null;
+            yield return nextPos;
         }
 
         nextPos = endPosition.position;
@@ -50,5 +57,6 @@ public class Camera_Scroll : MonoBehaviour
         myCam.transform.position = nextPos;
         GlobalEvent.MovementAllowed?.Invoke(true);
         Debug.Log("Movement allowed");
+        camMove.GetComponent<CameraMovement>().enabled = true;
     }
 }
