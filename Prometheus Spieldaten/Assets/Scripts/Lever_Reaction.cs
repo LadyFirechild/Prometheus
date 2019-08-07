@@ -8,6 +8,7 @@ public class Lever_Reaction : MonoBehaviour
     public BoxCollider2D BoxColl;
     public Animator doorOpen;
     public bool isOpen;
+    public float timeWait;
 
 
     void Start()
@@ -18,16 +19,17 @@ public class Lever_Reaction : MonoBehaviour
 
     void Update()
     {
-        
+
     }
 
     void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.gameObject.tag == "Player")
         {
-           // if (doorOpen != null)
-           //     doorOpen = true;
+
             Door.gameObject.SetActive(false);
+
+
         }
 
         if (collision.gameObject.tag == "Moveable")
@@ -40,8 +42,9 @@ public class Lever_Reaction : MonoBehaviour
     {
         if (collision.gameObject.tag == "Player")
         {
-
             Door.gameObject.SetActive(false);
+
+
         }
         if (collision.gameObject.tag == "Moveable")
         {
