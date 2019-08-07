@@ -6,19 +6,27 @@ public class Lever_Reaction : MonoBehaviour
 {
     public GameObject Door;
     public BoxCollider2D BoxColl;
+    public Animator doorOpen;
+    public bool isOpen;
+
 
     void Start()
     {
         BoxColl = GetComponent<BoxCollider2D>();
+        doorOpen = Door.GetComponent<Animator>();
     }
 
-
+    void Update()
+    {
+        
+    }
 
     void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.gameObject.tag == "Player")
         {
-
+           // if (doorOpen != null)
+           //     doorOpen = true;
             Door.gameObject.SetActive(false);
         }
 
