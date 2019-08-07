@@ -1516,7 +1516,7 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 50beb5dc438ceb949b93fdc7f38b625d, type: 3}
   allWalkSources: []
   deltaSoundWalk: 0
-  TimeBetweenSteps: 0.55
+  TimeBetweenSteps: 0.6
   movementBlocked: 0
 --- !u!82 &4607022864592892100
 AudioSource:

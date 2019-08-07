@@ -1205,6 +1205,11 @@ PrefabInstance:
       propertyPath: m_SortingOrder
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 8982038314997090830, guid: a3cf615568fdc9f44b310fdf2ded68d5,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a3cf615568fdc9f44b310fdf2ded68d5, type: 3}
 --- !u!1 &586234823
@@ -1723,7 +1728,7 @@ AudioSource:
     type: 2}
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 1
-  m_Volume: 1
+  m_Volume: 0.4
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -4462,15 +4467,10 @@ PrefabInstance:
       propertyPath: m_Mesh
       value: 
       objectReference: {fileID: 0}
-    - target: {fileID: 4607022864668974447, guid: 8f6da66d399787241b87f99d569b1d59,
+    - target: {fileID: 4607022864592892107, guid: 8f6da66d399787241b87f99d569b1d59,
         type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 63
-      objectReference: {fileID: 0}
-    - target: {fileID: 4607022864668974446, guid: 8f6da66d399787241b87f99d569b1d59,
-        type: 3}
-      propertyPath: m_TagString
-      value: MainCamera
+      propertyPath: TimeBetweenSteps
+      value: 0.6
       objectReference: {fileID: 0}
     - target: {fileID: 4607022863331031043, guid: 8f6da66d399787241b87f99d569b1d59,
         type: 3}
@@ -4521,6 +4521,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Mesh
       value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4607022864668974447, guid: 8f6da66d399787241b87f99d569b1d59,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 63
+      objectReference: {fileID: 0}
+    - target: {fileID: 4607022864668974446, guid: 8f6da66d399787241b87f99d569b1d59,
+        type: 3}
+      propertyPath: m_TagString
+      value: MainCamera
       objectReference: {fileID: 0}
     - target: {fileID: 4607022863238254576, guid: 8f6da66d399787241b87f99d569b1d59,
         type: 3}

@@ -10761,7 +10761,7 @@ AudioSource:
     type: 2}
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 1
-  m_Volume: 0.2
+  m_Volume: 0.23
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -13066,6 +13066,11 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 2a2835dd3da613847ae5941e9d187798, type: 2}
+    - target: {fileID: 4607022864592892107, guid: 8f6da66d399787241b87f99d569b1d59,
+        type: 3}
+      propertyPath: TimeBetweenSteps
+      value: 0.6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8f6da66d399787241b87f99d569b1d59, type: 3}
 --- !u!1001 &6412140645436593614
