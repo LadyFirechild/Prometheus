@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 3573099689724246865}
   - component: {fileID: 3573099689724246879}
   - component: {fileID: 3573099689724246878}
+  - component: {fileID: 2719653931311496605}
   - component: {fileID: 5304390107799276992}
   - component: {fileID: 2174780761359303006}
   m_Layer: 0
@@ -96,6 +97,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Door: {fileID: 0}
+  BoxColl: {fileID: 0}
+  doorOpen: {fileID: 0}
+  isOpen: 0
+  timeWait: 0
 --- !u!61 &3573099689724246878
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -122,6 +127,25 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 13.81, y: 4.5}
   m_EdgeRadius: 0
+--- !u!114 &2719653931311496605
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3573099689724246866}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: db17177e557980846a8eb989c3e1576e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  "T\xFCr": {fileID: 0}
+  timesPlayed: 0
+  switchSource: {fileID: 0}
+  switchClip: {fileID: 0}
+  offSSet: {x: 0, y: 0, z: 0}
+  duration: 0.5
+  closeagain: 1
 --- !u!82 &5304390107799276992
 AudioSource:
   m_ObjectHideFlags: 0
