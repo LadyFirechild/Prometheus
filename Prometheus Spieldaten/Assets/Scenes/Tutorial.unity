@@ -11149,6 +11149,26 @@ PrefabInstance:
       propertyPath: m_SortingOrder
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 6412140646438338791, guid: f0308ad94ec8a264da928a9f718a685a,
+        type: 3}
+      propertyPath: m_Offset.x
+      value: -0.03014636
+      objectReference: {fileID: 0}
+    - target: {fileID: 6412140646438338791, guid: f0308ad94ec8a264da928a9f718a685a,
+        type: 3}
+      propertyPath: m_Size.x
+      value: 3.1224594
+      objectReference: {fileID: 0}
+    - target: {fileID: 6412140646438338791, guid: f0308ad94ec8a264da928a9f718a685a,
+        type: 3}
+      propertyPath: m_Offset.y
+      value: 0.04782653
+      objectReference: {fileID: 0}
+    - target: {fileID: 6412140646438338791, guid: f0308ad94ec8a264da928a9f718a685a,
+        type: 3}
+      propertyPath: m_Size.y
+      value: 2.874197
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f0308ad94ec8a264da928a9f718a685a, type: 3}
 --- !u!4 &1667334658 stripped
@@ -11386,6 +11406,26 @@ PrefabInstance:
         type: 3}
       propertyPath: m_SortingLayer
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6412140646438338791, guid: f0308ad94ec8a264da928a9f718a685a,
+        type: 3}
+      propertyPath: m_Offset.x
+      value: 0.001251936
+      objectReference: {fileID: 0}
+    - target: {fileID: 6412140646438338791, guid: f0308ad94ec8a264da928a9f718a685a,
+        type: 3}
+      propertyPath: m_Size.x
+      value: 3.1708884
+      objectReference: {fileID: 0}
+    - target: {fileID: 6412140646438338791, guid: f0308ad94ec8a264da928a9f718a685a,
+        type: 3}
+      propertyPath: m_Offset.y
+      value: 0.0038157105
+      objectReference: {fileID: 0}
+    - target: {fileID: 6412140646438338791, guid: f0308ad94ec8a264da928a9f718a685a,
+        type: 3}
+      propertyPath: m_Size.y
+      value: 2.8632522
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f0308ad94ec8a264da928a9f718a685a, type: 3}
