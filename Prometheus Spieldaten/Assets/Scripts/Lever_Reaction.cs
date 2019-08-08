@@ -24,13 +24,13 @@ public class Lever_Reaction : MonoBehaviour
 
     void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.gameObject.tag == "Player")
+       /* if (collision.gameObject.tag == "Player")
         {
 
             Door.gameObject.SetActive(false);
 
 
-        }
+        }*/
 
         if (collision.gameObject.tag == "Moveable")
         {
@@ -40,27 +40,27 @@ public class Lever_Reaction : MonoBehaviour
 
     private void OnCollisionStay2D(Collision2D collision)
     {
-        if (collision.gameObject.tag == "Player")
+      /*  if (collision.gameObject.tag == "Player")
         {
             Door.gameObject.SetActive(false);
 
 
-        }
+        } */
         if (collision.gameObject.tag == "Moveable")
         {
             Physics2D.IgnoreCollision(collision.collider, BoxColl);
         }
     }
-    private void OnCollisionExit2D(Collision2D collision)
+ /*   private void OnCollisionExit2D(Collision2D collision)
     {
         if (collision.gameObject.tag == "Player" || collision.gameObject.tag == "Moveable")
         {
 
             Door.gameObject.SetActive(true);
         }
-    }
+    } */
 
-    public void OnTriggerEnter2D(Collider2D other)
+ /*   public void OnTriggerEnter2D(Collider2D other)
     {
         if (other.gameObject.tag == "Moveable")
         {
@@ -83,5 +83,5 @@ public class Lever_Reaction : MonoBehaviour
 
             Door.gameObject.SetActive(true);
         }
-    }
+    } */
 }
