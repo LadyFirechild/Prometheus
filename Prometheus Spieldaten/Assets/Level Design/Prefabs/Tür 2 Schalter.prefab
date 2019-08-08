@@ -143,8 +143,8 @@ MonoBehaviour:
   timesPlayed: 0
   switchSource: {fileID: 0}
   switchClip: {fileID: 0}
-  offSSet: {x: 0, y: 0, z: 0}
-  duration: 0.5
+  offSSet: {x: 0, y: -2, z: 0}
+  duration: 1
   closeagain: 1
 --- !u!82 &5304390107799276992
 AudioSource:
