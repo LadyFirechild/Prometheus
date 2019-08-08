@@ -116,10 +116,7 @@ namespace Prometheus
                 walkAnim.animation.Stop("fallAnim");
             }
 
-            if(!playerMovement.grounded)
-            {
-                walkAnim.animation.Stop("walkAnim");
-            }
+
 
             if (Push == true)
             {
