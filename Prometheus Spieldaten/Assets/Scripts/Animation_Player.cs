@@ -31,7 +31,7 @@ namespace Prometheus
             walkAnim.animation.Stop("idleAnim");
         }
 
-        public void Update()
+        public void FixedUpdate()
         {
             velocity = playerInput.rigidbody.velocity;
 
@@ -83,7 +83,7 @@ namespace Prometheus
             {
                 if (playerInput.jump && playerMovement.grounded)
                 {
-                    
+                    walkAnim.animation.Stop("walkAnim");
                     walkAnim.animation.Play("jumpAnim", 1);
                     AirBorne = true;
                 }
@@ -114,6 +114,11 @@ namespace Prometheus
             if (playerMovement.grounded)
             {
                 walkAnim.animation.Stop("fallAnim");
+            }
+
+            if(!playerMovement.grounded)
+            {
+                walkAnim.animation.Stop("walkAnim");
             }
 
             if (Push == true)
